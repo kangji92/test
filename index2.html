@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="ISEC | 이니허브 체험하기 이벤트">
+    <meta property="og:keywords" content="보안솔루션, PKI, 생체인증, 통합인증, SSO, 계정관리, 권한관리, DB암호화, 구간암호화, KMS, 클라우드, 간편인증, 이니텍">
+    <meta property="og:description" content="다양한 사설인증 서비스를 하나로 통합하는 인증통합서비스 이니허브의 이벤트참여 페이지입니다">
+    <title>이니허브 | 체험하기 이벤트</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.inihub.biz/favicon.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+  
+    <div class="wrap">
+        <div class="container">
+            <span class="inihub-logo"><img src="./img/bi.svg" alt="이니허브로고"></span>
+            <div class="post st2">
+                <div class="inner">
+                    <div class="img-box">
+                        <img src="./img/ico_finish.png" alt="인증체험완료 이미지">
+                    </div>
+                    <div class="txt-box">
+                        <h1>인증이 완료되었습니다!</h1>
+                        <span>아래 정보 입력 후 응모하시면 <br>선물을 드립니다.</span>
+                    </div>
+                    <div class="form-wrap">
+                        <form action="" method="post">
+                            <div class="form-box">
+                                <div class="input">
+                                    <label for="name">이름</label>
+                                    <input id="name" type="text" placeholder="홍길동" required>
+                                </div>
+                                <div class="input">
+                                    <label for="birth">생년월일</label>
+                                    <input id="birth" type="number" placeholder="숫자8자리" required>
+                                </div>
+                                <div class="input">
+                                    <label for="cell">휴대폰번호</label>
+                                    <input id="cell" type="number" placeholder="01012345678" required>
+                                </div>
+                                <div class="input">
+                                    <label for="company">소속(회사명)</label>
+                                    <input id="company" type="text" placeholder="이니텍" required>
+                                </div>
+                                <div class="input">
+                                    <label for="belong">직급</label>
+                                    <input id="belong" type="text" placeholder="사원" required>
+                                </div>
+                            </div>
+                            <div class="checkbox">
+                                <input id="agree" type="checkbox" name="agree" class="required" title="마케팅 활용동의" required>
+                                <label for="agree"><span>마케팅 활용동의</span></label>
+                            </div>
+                            <div class="input-btn">
+                                <input onclick="send()" id="submit" type="submit" value="완료" class="btn aqua">
+                                <label for="submit" class="btn">응모하기 &nbsp; ></label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="bg bg2">
+                <span class="initech-logo"><img src="./img/initech_wh.svg" alt="이니텍로고"></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
