@@ -2,216 +2,46 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>현황판</title>
-    <link rel="stylesheet" href="./html/css/reset.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="title" content="ISEC | 이니허브 체험하기 이벤트">
+    <meta property="og:keywords" content="보안솔루션, PKI, 생체인증, 통합인증, SSO, 계정관리, 권한관리, DB암호화, 구간암호화, KMS, 클라우드, 간편인증, 이니텍">
+    <meta property="og:description" content="다양한 사설인증 서비스를 하나로 통합하는 인증통합서비스 이니허브의 이벤트참여 페이지입니다">
+    <title>이니허브 | 체험하기 이벤트</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.inihub.biz/favicon.ico">
 </head>
 <body>
-    <style>
-        .ia {position: relative; font-family: sans-serif;}
-        .ia .content__header {position: fixed; top: 0;width: 100%; height: 68px; background: #333;}
-        .ia .content__header h1 {display: flex; align-items: center; font-size: 2em;text-align: left;color: #fff; padding-left: 1em; height: 68px;}
-        .ia a, 
-        .ia button, 
-        .ia .link {padding: 0.5em; background: #dedede; text-align: left; display: block; word-break: break-all; cursor:pointer; }
-        .ia .tbl, .ia .tbl2{ border-top: 2px solid #333; border-bottom: 1px solid #444;}
-        .ia .bar { display: block; position: relative; height: 24px; overflow: hidden; background: rgba(0,0,0,0.2); border-radius: calc(24px * 0.5);}
-        .ia table th, td {border-top: 1px solid #999; padding: 0.4em;}
-        .ia table th {border-right: 1px solid #999; text-align: center; padding: 10px; font-weight: bold; padding: 0.6em; border-bottom: 1px solid #333;}
-        .ia table tbody .d1,.d2,.d3,.d4, .date, td {border-right: 1px solid #999; padding: 0 10px}
-        .ia .ttl {margin-top: 1em; margin-bottom: 0.5em; background: #333;height: 50px;}
-        .ia .ttl h2 {display: flex;  align-items: center;  padding-left: 1em; height: 50px; font-size: 1.5em; text-align: left; color: #fff;}
-        .ia .content__body {overflow: hidden; margin: 0.5em 1em; margin-top: 68px; float: left; width: calc(100% - 2em); margin-bottom: 50px;}
-        .ia .content__body > p {padding-top: 16px;}
-        .ia .memo ul li {text-decoration:line-through} 
-        .ia .memo ul li.recent {text-decoration:none; color:blue;} 
-        .ia .tbl table tbody td,
-        .ia .tbl2 table tbody td {border-top: 1px solid #ddd; line-height: 1.3em; padding: 0.4em;}
-        .ia .tbl table tbody + tbody tr:first-child td,
-        .ia .tbl2 table tbody + tbody tr:first-child td {border-top: 1px solid #999 !important;}
-        .ia .w3c,
-        .ia .cb { text-align: center;}
-        .ia table { width: 100%;}
-        .ia table th a {display: block; font-weight: bold; padding-top: 6px;}
-        .ia table th > span {display: block; font-weight: normal; padding-top: 6px;}
-        .ia .note { line-height: 1.1;}
-        .ia .note ul {display: block; margin-top: 6px;}
-        .ia .note li {position: relative; margin-left: 16px; font-size: 16px; line-height: 1.5;}
-        .ia .note li::before {content: ''; display: block; width: 5px; height: 5px; border-radius: 50%; background: #000; position: absolute; left:-16px; top: 50%; transform: translateY(-50%);}
-        .ia .note p {font-weight: bold; padding-bottom: 2px;}
-        .ia .tbl2 table tbody td {border-top: 1px solid #ddd; line-height: 1.3em; padding: 0.8em;}
-        .ia .tbl table th:last-child {width: 140px;}
-        .ia .tbl2 table th:nth-child(2) {width: 150px;}
-        .ia .tbl2 table .issue {width: 800px;}
-        .ia .tbl2 table th:last-child {width: 800px;}
-        .ia .tbl2 tr.recent {border: 3px solid blueviolet;}
-        .ia table .date {text-align: center;}
-        .ia em {font-weight: 800;}
-        .ia .num {text-align: center;}
-    </style>
-    <div class="ia">
-        <div class="content__header">
-            <h1>퍼블리싱 현황판 (ISEC 이니허브 체험하기)</h1>
-        </div>
-        <div class="content__body">
-            <!--<div class="bar"></div>-->
-            <p style="font-weight: bold; font-size: 24px;">※ 하단 수정이력 / 수정파일 목록 확인 바랍니다.</p>
-            <div class="ttl"> 
-                <h2>파일 리스트</h2> 
+    <div class="wrap">
+        <div class="container">
+            <span class="inihub-logo"><img src="./img/bi.svg" alt="이니허브로고"></span>
+            <div class="ttl">
+                <h1>세상의 모든인증 <br><span>&nbsp;&nbsp;EVENT&nbsp;&nbsp;</span></h1>
+                <h2 class="txt-rounded">이니허브 인증하고 선물 받자!</h2> 
             </div>
-            <div class="tbl">
-                <table>
-                    <colgroup>
-                        <col width="3%" />
-                        <col width="10%" />
-                        <col width="10%" />
-                        <col width="10%" />
-                        <col width="5%" />
-                        <col width="20%" />
-                        <col width="14%" />
-                        <col width="14%" />
-                        <col width="14%" />
-                    </colgroup>
-                    <thead>
-                    <tr>
-                        <th scope="col" rowspan="2">번호</th>
-                        <th scope="col" colspan="4">논리경로</th>
-                        <th scope="col" rowspan="2">파일명</th>
-                        <th scope="col" colspan="2">퍼블리싱 검수</th>
-                        <th scope="col" rowspan="2">메모</th>
-                    </tr>
-                    <tr>
-                        <th scope="col">D1</th>
-                        <th scope="col">D2</th>
-                        <th scope="col">D3</th>
-                        <th scope="col">D4</th>
-                        <th scope="col"><a class="tip">W3C <span>html/css 오류 검수</span></a></th>
-                        <th scope="col"><a class="tip">C/B <span>크로스브라우징 체크 </span></a><span>(Chrome, Edge, Firefox)</span></th>
-                       
-                    </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="num">1</td>
-                            <td class="d1">체험 시작화면</td>
-                            <td class="d2"></td>
-                            <td class="d3">-</td>
-                            <td class="d4">-</td>
-                            <td class="date">
-                                <ul>
-                                    <li><a href="./html/index.html" target="_blank" class="btn">index.html</a></li>
-                                </ul> 
-                            </td>
-                            <td class="w3c">O</td>
-                            <td class="cb">O</td>
-                            <td class="memo">
-                                <ul>
-                                    <li class="recent"> 2023-09-08</li>
-                                </ul>
-                        </td>
-                        </tr>
-                        <tr>
-                            <td class="num">2</td>
-                            <td class="d1">이벤트 응모화면</td>
-                            <td class="d2"></td>
-                            <td class="d3">-</td>
-                            <td class="d4">-</td>
-                            <td class="date">
-                                <ul>
-                                    <li><a href="./html/index2.html" target="_blank" class="btn">index2.html</a></li>
-                                </ul> 
-                            </td>
-                            <td class="w3c">O</td>
-                            <td class="cb">O</td>
-                            <td class="memo">
-                                <ul>
-                                    <li class="recent"> 2023-09-07</li>
-                                </ul>
-                        </td>
-                        </tr>
-                        <tr>
-                            <td class="num">3</td>
-                            <!--
-                            <td class="d1" rowspan="4">서브화면</td>
-                            <td class="d2">인증센터</td>-->
-                            <td class="d1" rowspan="3">응모완료화면</td>
-                            <td class="d2"></td>
-                            <td class="d3"></td>
-                            <td class="d4"></td>
-                            <td class="date">
-                                <ul>
-                                    <li><a href="./html/index3.html" target="_blank" class="btn">index3.html</a></li>
-                                </ul> 
-                            </td>
-                            <td class="w3c">O</td>
-                            <td class="cb">O</td>
-                            <td class="memo">
-                                <ul>
-                                    <li class="recent"> 2023-03-17</li>
-                                </ul>
-                        </td>
-                        </tr>
-                  
-                    </tbody>
-             
-                </table>
+            <div class="visual">
+                <img src="./img/visual.png" alt="선물이미지">
             </div>
-            <div class="ttl"> 
-                <h2>수정이력</h2> 
+            <div class="post st1">
+                <div class="inner">
+                    <div class="txt-box">
+                        <p class="underline">체험방법</p>
+                        <ul>
+                            <li>간편인증 체험하고</li>
+                            <li>개인정보 작성 후 응모하면</li>
+                            <li>100% 선물증정!</li>
+                        </ul>
+                    </div>
+                    <div class="btn-wrap">
+                        <a id="startInihub" href="javascript:;" class="btn">체험시작 &nbsp; >  </a>
+                    </div>
+                </div>
             </div>
-            <div class="tbl2">
-                <table>
-                        <colgroup>
-                            <col width="3%" />
-                            <col width="35%" />
-                            <col width="35%" />
-                            <col width="*" />
-                        </colgroup>
-                    <thead>
-                        <tr>
-                            <th scope="col">번호</th>
-                            <th scope="col">요청사항</th>
-                            <th scope="col">수정반영내용</th>
-                            <th scope="col">수정/추가파일 목록</th>
-                        </tr>
-                    </thead>
-                    <!--
-                    <tbody>
-                        <tr class="recent">
-                            <td class="num">1</td>
-                            <td class="input">
-                                <em>23/03/</em><br><br>
-                                1. 
-                            </td>
-                            <td class="output">
-                                <em>23/03/</em><br><br>
-                                1. 
-
-                                <br><br>
-                    
-                            </td>
-                            <td class="note">
-                                <div class="note">
-                                    <em>css</em>
-                                    <ul>
-                                        <li></li>
-                                    </ul>
-                                    <br>
-                                    <em></em>
-                                    <ul>
-                                        <li></li>
-                                    </ul>
-                                </div>
-                            </td>
-                        </tr>
-                    
-                    </tbody>-->
-                </table>
+            <div class="bg bg1">
+                <span class="initech-logo"><img src="./img/initech_wh.svg" alt="이니텍로고"></span>
             </div>
-            
         </div>
     </div>
-   
 </body>
 </html>
