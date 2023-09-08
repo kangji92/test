@@ -291,8 +291,9 @@ input[type='submit'] + label:hover {color: #fff; box-shadow: 0px 2px 10px 2px rg
 }
 
 @media (max-width: 320px) {
+    .ttl {margin-top: 46px;}
     .ttl h1 {font-size: 20.48px;}
-    .ttl h1 span {font-size: 36.16px;}
+    .ttl h1 span {font-size: 36.16px; height: 46px;}
     .inihub-logo {top: 12px;}
     .initech-logo {bottom: 16px;}
     .post {bottom: 35.84px;}
@@ -305,6 +306,7 @@ input[type='submit'] + label:hover {color: #fff; box-shadow: 0px 2px 10px 2px rg
     .input + .input {margin-top: 5.76px;}
     .btn-wrap, 
     .input-btn {margin-top: 12.8px;}
+    input[type='button'], input[type='submit'] {width: 147px; height: 25.59px; border-radius: calc(25.59px / 2);}
     a, 
     button, 
     input[type='button'] + label, 
@@ -315,8 +317,36 @@ input[type='submit'] + label:hover {color: #fff; box-shadow: 0px 2px 10px 2px rg
 .input input {
     height: 22.39px;
 }
+.input label {
+    margin-left: 10.24px;
+} 
  .txt-box ul li {
        font-size: 10.496px;
     }
     .post p {font-size: 12.8px;}
+    .txt-rounded {
+        border-radius: calc(19px / 2);
+    }
+    .checkbox {
+        height: 16px;
+    }
+    .checkbox input[type="checkbox"] + label:before {
+        width: 12.6px;
+        height: 12.6px;
+    }
+    .checkbox input[type="checkbox"] + label span {
+    padding-left: 20.46px;
+}
+.checkbox input[type="checkbox"] + label:before {margin-top: -5px;}
+.post.st2 .img-box img {
+    width: 45.2px;
+  
+}
+.post p.underline {
+    padding-top: 6.4px;}
+.txt-box h1 {font-size: 12.8px;}
+.txt-box ul,
+.form-wrap {
+    margin-top: 12.8px;}
+    .txt-box ul li::before {width: 12.8px; height: 13px;}
 }
