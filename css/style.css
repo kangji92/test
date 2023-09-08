@@ -34,7 +34,7 @@ ul li {list-style: none;}
 .img-box {margin: 0 auto; margin-top: 4vw; }
 .img-box img {width: 78%; margin: 0 auto;}
 
-.post {position: absolute; width: 100%;   bottom: 11.2vw; left: 50%; transform: translateX(-50%);}
+.post {position: absolute; width: 100%; bottom: 12vw; left: 50%; transform: translateX(-50%);}
 .post.st1 {height: 57vw;  background: url('../img/wave_1.png') no-repeat center bottom; background-size: 100%;}
 .post.st3 {background: url('../img/wave_3.png') no-repeat center bottom; height: 90.2vw; background-size: 100%;}
 .post.st2 {background: url('../img/wave_2.png') no-repeat center bottom; height: 115.8vw; background-size: 100%;}
@@ -250,7 +250,7 @@ input[type='submit'] + label:hover {color: #fff; box-shadow: 0px 2px 10px 2px rg
     .post.st2 .img-box {margin-top: 42px;}
 }
 
-@media (max-width: 375px) {
+@media (max-width: 420px) {
     .inihub-logo,
     .initech-logo  {min-width: 55px; }
     .container {height: 155vw; min-height: 490px;}
