@@ -130,7 +130,7 @@ input[type='submit'] + label:hover {color: #fff; box-shadow: 0px 2px 10px 2px rg
     .initech-logo {bottom: 25px; width: 86px;}
     .ttl {margin-top: 72px;}
     .ttl h1 {margin-bottom: 20px; font-size: 2rem;}
-    .ttl h1 span {font-size: 3.5313rem; height: 72px;}
+    .ttl h1 span {font-size: 3.5313rem; height: 72px; line-height: normal;}
     .txt-rounded {width: 285px; height: 30px; line-height: 30px; font-size: .9375rem;border-radius: 15px; }
     .post .inner {width: 370px;}
     .txt-box, 
@@ -185,7 +185,7 @@ input[type='submit'] + label:hover {color: #fff; box-shadow: 0px 2px 10px 2px rg
     .initech-logo {bottom: 25px; width: 104px;}
     .ttl {margin-top: 88px;}
     .ttl h1 {font-size: 2.4rem;margin-bottom: 20px;}
-    .ttl h1 span {font-size: 4.5rem; height: 90px;}
+    .ttl h1 span {font-size: 4.5rem; height: 90px; line-height: normal;}
     .txt-rounded {width: 348px; height: 36px; font-size: 1.125rem; border-radius: 18px;}
     .post .inner {width: 370px;}
 
