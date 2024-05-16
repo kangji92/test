@@ -1,74 +1,1304 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="title" content="ISEC | 이니허브 체험하기 이벤트">
-    <meta property="og:keywords" content="보안솔루션, PKI, 생체인증, 통합인증, SSO, 계정관리, 권한관리, DB암호화, 구간암호화, KMS, 클라우드, 간편인증, 이니텍">
-    <meta property="og:description" content="다양한 사설인증 서비스를 하나로 통합하는 인증통합서비스 이니허브의 이벤트참여 페이지입니다">
-    <title>이니허브 | 체험하기 이벤트</title>
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/font.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="shortcut icon" type="image/x-icon" href="https://www.inihub.biz/favicon.ico">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<head>
+	<meta name="naver-site-verification" content="4fae317e6e827d40a56104c131ab8c55af2d4173">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0"> 
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<meta name="title" content="이니허브 | 인증통합서비스">
+	<meta name="keywords" content="보안솔루션, PKI, 생체인증, 통합인증, SSO, 계정관리, 권한관리, DB암호화, 구간암호화, KMS, 클라우드, 간편인증, 이니텍">
+	<meta name="description" content="다양한 사설인증 서비스를 하나로 통합하는 인증통합서비스 입니다">
+	<meta name="url" content="https://www.inihub.biz">
+	<meta name="image" content="https://www.inihub.biz/img/og_img.jpg">
+	<meta property="og:title" content="이니허브 | 인증통합서비스">
+	<meta property="og:keywords" content="보안솔루션, PKI, 생체인증, 통합인증, SSO, 계정관리, 권한관리, DB암호화, 구간암호화, KMS, 클라우드, 간편인증, 이니텍">
+	<meta property="og:description" content="다양한 사설인증 서비스를 하나로 통합하는 인증통합서비스 입니다">
+	<meta property="og:url" content="https://www.inihub.biz">
+	<meta property="og:image" content="https://www.inihub.biz/img/og_img.jpg">
+	<meta name="image:width" content="800">
+	<meta name="image:height" content="400">
+	<link rel="canonical" href="https://www.inihub.biz">
+	<title>이니허브 | 인증통합서비스</title>            
+	<link rel="shortcut icon" type="image/x-icon" href="https://www.inihub.biz/favicon.ico">
+	<link rel="apple-touch-icon" sizes="114x114" href="https://www.inihub.biz/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="https://www.inihub.biz/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="https://www.inihub.biz/favicon-192x192.png">
+	<!-- Styles -->  
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/content.css">
+	<link rel="stylesheet" href="css/program.css">
+	<link rel="stylesheet" href="css/responsive.css">
+	<!-- scripts -->         
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/swiper-bundle.min.js"></script>
+	<link rel="stylesheet" href="css/swiper-6.3.5.css">
+	<script>
+
+		$(function() {
+			var promise = document.querySelector('.main-video').play();
+
+			if (promise !== undefined) {
+				promise.then((value) => {
+					// 자동재생 시작!
+				}).catch((error) => {
+					// 자동재생 막힐때
+					document.querySelector('.main-video').controls = true;
+				})
+			}
+
+			calcCirc()
+			$(window).resize(function() {
+				calcCirc();
+			})
+			
+			// 빠른연동 swiper
+			var fadeSwiper = new Swiper(".fadeSwiper", {
+				slidesPerView: 1,
+				effect: 'fade',
+				autoplay: false,
+				loop: true,
+				loopedSlides: 1,
+				speed: 200,
+				pagination: {
+					 el: '.preview.pagination',
+					 clickable: true,
+				 },
+				
+			});
+	
+			// 적용사례 PC swiper
+			var swiper = new Swiper(".sec6_swiper", {
+				slidesPerView: 1,
+				speed: 600,
+				spaceBetween: 20,
+				loop: false,
+				pagination: {
+					el: '.client_list.swiper_pagination.pc',
+					clickable: true,
+				},
+				navigation: {
+					nextEl: '.sec6_next_btn',
+					prevEl: '.sec6_prev_btn',
+				}
+			});
+			
+			// 적용사례 모바일 swiper
+			var swiper = new Swiper(".sec6_mo_swiper", {
+				slidesPerView: 1,
+				speed: 600,
+				spaceBetween: 20,
+				loop: false,
+				pagination: {
+					el: '.client_list.swiper_pagination.mo',
+					clickable: true,
+				},
+			});
+
+			$('.main_visual .visual_wrap').find('*[class*="ani-"]').addClass('done');
+
+			// Scroll 애니메이션
+			$(window).scroll(function() {
+				var pos = $('html,body').scrollTop();	
+				//var heihgt = $(window).outerHeight();
+				var width  = $(document).outerWidth();	
+				//var scBottom = pos + heihgt;
+				//console.log('scBottom : ' + scBottom);
+	
+				if ( width > 540 )	{
+					if(pos > $('.section0').offset().top * 0.3){
+						$('.section0').find('*[class*="ani-"]').addClass('done');
+					}
+					if(pos > $('.section2').offset().top * 0.9){
+						$('.section2').find('*[class*="ani-"]').addClass('done');
+					}
+					if (pos > $('.section3').offset().top * 0.9) {
+						$('.section3').find('*[class*="ani-"]').addClass('done');
+						fadeSwiper.autoplay.start();
+					}
+				} else {
+					if(pos > $('.section0').offset().top * 0.1){
+						$('.section0').find('*[class*="ani-"]').addClass('done');
+					}
+	
+					if(pos > $('.section2').offset().top * 0.9){
+						$('.section2 .sec_tit').find('*[class*="ani-"]').addClass('done');
+					}
+	
+					if(pos > $('.section2 .sec_con').offset().top * 0.8){
+						$('.section2 .sec_con .mo_span1').find('*[class*="ani-"]').addClass('done');
+					}
+	
+					if(pos > $('.section2 .sec_con').offset().top * 0.9){
+						$('.section2 .sec_con .mo_span2').find('*[class*="ani-"]').addClass('done');
+					}
+	
+					if(pos > $('.section2 .sec_con').offset().top * 1){
+						$('.section2 .sec_con .mo_span3').find('*[class*="ani-"]').addClass('done');
+					}
+
+					if (pos > $('.section3').offset().top * 0.9) {
+						$('.section3 .sec_tit').find('*[class*="ani-"]').addClass('done');
+						fadeSwiper.autoplay.start();
+					}
+					if (pos > $('.section3 .sec_con').offset().top * 0.9) {
+						$('.section3 .sec_con').find('*[class*="ani-"]').addClass('done');
+					}
+
+				}
+	
+				if(pos > $('.section1').offset().top * 0.7){
+					$('.section1').find('*[class*="ani-"]').addClass('done');
+				}
+				if (pos > $('.section4').offset().top * 0.9) {
+					$('.section4').find('*[class*="ani-"]').addClass('done');
+				}
+	
+				if(pos > $('.section5').offset().top * 0.9){
+					$('.section5').find('*[class*="ani-"]').addClass('done');
+				}
+				if(pos > $('.section6').offset().top * 0.9){
+					$('.section6').find('*[class*="ani-"]').addClass('done');
+				}
+				if(pos > $('.section7').offset().top * 0.9){
+					$('.section7').find('*[class*="ani-"]').addClass('done');
+				}
+				if(pos > $('.section8').offset().top * 0.9){
+					$('.section8').find('*[class*="ani-"]').addClass('done');
+				}
+				if(pos > $('.section9').offset().top * 0.9){
+					$('.section9').find('*[class*="ani-"]').addClass('done');
+				}
+				if(pos > $('.section10').offset().top * 0.9){
+					$('.section10').find('*[class*="ani-"]').addClass('done');
+				}
+				if(pos > $('.section11').offset().top * 0.9){
+					$('.section11').find('*[class*="ani-"]').addClass('done');
+				}
+				if (pos > $('.section10').offset().top * 0.9) {
+					$('.section10').find('*[class*="ani-"]').addClass('done');
+				}
+				if (pos > $('.section11').offset().top * 0.9) {
+					$('.section11').find('*[class*="ani-"]').addClass('done');
+				}
+				if (pos > $('.section12').offset().top * 0.9) {
+					$('.section12').find('*[class*="ani-"]').addClass('done');
+				}
+			});
+
+			// 프로세스 탭메뉴
+			$('#process .tab_list ul li').on({
+				click : function() {
+					var index = $(this).index();
+					if(index == 0){
+						$('#process .sec_tit > p > span').text('고객사 측면');
+					}else if(index == 1){
+						$('#process .sec_tit > p > span').text('사용자 측면');
+					}
+					//console.log('clicked')
+					$('#process .tab_list ul li').removeClass("on");
+					$(this).addClass("on");
+					$('#process .tab_con ul li').removeClass("on");
+					$('#process .tab_con ul li').eq(index).addClass("on");			
+				},
+				mouseover: function() {		
+					var index = $(this).index();		
+					$(this).addClass("hover");
+					
+				},
+				mouseleave: function() {
+					$(this).removeClass("hover");
+				}		
+			});	
+	
+			// 서비스 이용절차 탭메뉴
+			$('.section8 .tab_list ul li').on({
+				click: function() {
+					var index = $(this).index();		
+					
+					$('.section8 .tab_list ul li').removeClass("on");
+					$(this).addClass("on");
+					$('.section8 .tab_con ul li').removeClass("on");
+					$('.section8 .tab_con ul li').eq(index).addClass("on");			
+				},
+				mouseover: function(){		
+					var index = $(this).index();		
+					$(this).addClass("hover");
+					
+				},
+				mouseleave: function(){
+					$(this).removeClass("hover");
+				}		
+			});	
+			
+			// 소개영상 탭메뉴
+			$('#video .tab_list ul li').on({
+				click: function() {
+					var index = $(this).index();		
+					
+					$('#video .tab_list ul li').removeClass("on");
+					$('.sec_tit .num').text(index+1);
+					$(this).addClass("on");
+					$('#video .tab_con ul li').removeClass("on");
+					$('#video .tab_con ul li').eq(index).addClass("on");						
+					$('.poster_box').show();	
+	
+					//$('#video .video_wrap iframe').each(function(index){
+					//	$('#video .video_wrap iframe')[index].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+					//});
+				},
+				mouseover: function(){		
+					var index = $(this).index();		
+					$(this).addClass("hover");
+					
+				},
+				mouseleave: function(){
+					$(this).removeClass("hover");
+				}		
+			});	
+			
+			$('.poster_box button').on('click', function() {
+				$(this).parent('.poster_box').hide();
+	
+				var num = $(this).closest('li').index();
+				//$('.section9 .video_wrap iframe')[num].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
+			});
+	
+			$('.pop_closebtn').on("click", function() {
+				$('#pop').stop().fadeOut(400);
+			});
+	
+			$('.pop_open').on({
+				click: function(){			
+					$('#pop').stop().fadeIn(400);
+				}	
+			});
+			
+			// 외부영역 클릭 시 팝업 닫기
+			/*
+			$(document).mouseup(function (e){
+			  var LayerPopup = $("#pop .inner");
+			  if(LayerPopup.has(e.target).length === 0){
+				for (let index = 0; index < LayerPopup.length; index++) {
+					closePop(LayerPopup[index].id);
+				}
+			  }
+			});
+			*/
+		});
+	
+		/*
+		function pop_open() {
+			$('#pop').stop().fadeIn(400);
+		}
+		*/
+		// 서비스 이용절차 원형값 계산
+		function calcCirc() {
+			var circWidth = $('.section8 ul > li .img_box').width();
+			$('.section8 ul > li .img_box').height(circWidth);
+			$('.section8 ul > li .img_box').css({borderRadius: circWidth / 2 + 10});
+		}
+
+		// 메일보내기
+		/*
+		function sendMail() {
+			if (frm.company.value.trim() == "") {
+				console.log('회사명을 입력해 주세요');
+				frm.company.focus();
+				return false;
+			}
+			if (frm.belong.value.trim() == "") {
+				console.log('소속을 입력해 주세요.');
+				frm.belong.focus();
+				return false;
+			}
+			if (frm.name.value.trim() == "") {
+				console.log('성명을 입력해 주세요.');
+				frm.name.focus();
+				return false;
+			}
+			if (frm.cell.value.trim() == "") {
+				console.log('연락처를 입력해 주세요.');
+				frm.cell.focus();
+				return false;
+			}
+			if (frm.email1.value.trim() == "") {
+				console.log('이메일을 입력해 주세요.');
+				frm.email1.focus();
+				return false;
+			}
+			if ($('#agree').is(':checked') == false) {
+				alert('개인정보 수집 및 이용에 동의해 주세요.');
+				console.log('개인정보 수집 및 이용에 동의해 주세요.');
+				return false;
+			}
+			else {
+				document.frm.submit();
+				alert("메일이 전송되었습니다. 확인 후 회신드리겠습니다.")
+			} 
+		}*/
+
+	</script>
 </head>
 <body>
-  
-    <div class="wrap">
-        <div class="container">
-            <span class="inihub-logo"><img src="./img/bi.svg" alt="이니허브로고"></span>
-            <div class="post st2">
-                <div class="inner">
-                    <div class="img-box">
-                        <img src="./img/ico_finish.png" alt="인증체험완료 이미지">
-                    </div>
-                    <div class="txt-box">
-                        <h1>인증이 완료되었습니다!</h1>
-                        <span>아래 정보 입력 후 응모하시면 <br>선물을 드립니다.</span>
-                    </div>
-                    <div class="form-wrap">
-                        <form action="" method="post">
-                            <div class="form-box">
-                                <div class="input">
-                                    <label for="name">이름</label>
-                                    <input id="name" type="text" placeholder="홍길동" required>
-                                </div>
-                                <div class="input">
-                                    <label for="birth">생년월일</label>
-                                    <input id="birth" type="number" placeholder="숫자8자리" required>
-                                </div>
-                                <div class="input">
-                                    <label for="cell">휴대폰번호</label>
-                                    <input id="cell" type="number" placeholder="01012345678" required>
-                                </div>
-                                <div class="input">
-                                    <label for="company">소속(회사명)</label>
-                                    <input id="company" type="text" placeholder="이니텍" required>
-                                </div>
-                                <div class="input">
-                                    <label for="belong">직급</label>
-                                    <input id="belong" type="text" placeholder="사원" required>
-                                </div>
-                            </div>
-                            <div class="checkbox">
-                                <input id="agree" type="checkbox" name="agree" class="required" title="마케팅 활용동의" required>
-                                <label for="agree"><span>마케팅 활용동의</span></label>
-                            </div>
-                            <div class="input-btn">
-                                <input onclick="send()" id="submit" type="submit" value="완료" class="btn aqua">
-                                <label for="submit" class="btn">응모하기 &nbsp; ></label>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="bg bg2">
-                <span class="initech-logo"><img src="./img/initech_wh.svg" alt="이니텍로고"></span>
-            </div>
-        </div>
-    </div>
+	<span itemscope="" itemtype="http://schema.org/Organization">
+		<link itemprop="url" href="https://www.inihub.biz">
+		<a itemprop="sameAs" href="https://www.youtube.com/@initech1705/featured"></a>
+	</span>
+	<div class="wrapper">
+		<div id="header" class="header">
+			<div class="inner clear">
+				<h1 class="logo">
+					<a href="javascript:;" onclick="scroll_page('wrapper')">
+						<img src="img/logo.svg" alt="이니텍">
+					</a>
+				</h1> 
+				<div class="gnb">
+					<ul class="clear aggro">
+						<li>
+							<a href="#intro">서비스소개</a>
+						</li>
+						<li>
+							<a href="#process">프로세스</a>
+						</li>
+						<li>
+							<a href="#try">체험하기</a>
+						</li>
+						<li>
+							<a href="#procedure">이용절차</a>
+						</li>
+						<li>
+							<a href="#client">적용사례</a>
+						</li>
+						<li>
+							<a href="#video">소개영상</a>
+						</li>
+						<li>
+							<a href="#contact">서비스문의</a>	
+						</li>
+						<li>
+							<a href="https://con-stg.inihub.biz:9999/obd/" target="_blank">서비스신청</a>
+						</li>
+					</ul>	
+				</div>
+				<div class="util">
+					<a href="javascript:;" class="mo_btn mo_open">
+						<img src="img/mo_menu.png" alt="메뉴버튼 이미지">
+					</a>
+					<!--
+					<a href="http://initech2.sanggong.net/" class="login_btn">
+						<img src="img/icon_login.png"/>로그인
+					</a>
+					-->
+				</div>
+			</div>
+		</div>
+		<div class="mo_menu all_menu clear">
+			<div class="menu_inner">
+				<div class="close_btn">
+					<a href="javascript:;" class="mo_close">
+						<img src="img/mo_close.png" alt="닫기버튼 이미지"> 
+					</a>
+				</div>
+				<div class="main_cont">
+					<div class="tb">
+						<div class="tbc">
+							<div class="gnb">
+								<ul class="clear aggro">
+									<li>
+										<a href="#intro">서비스소개</a>
+									</li>
+									<li>
+										<a href="#process">프로세스</a>
+									</li>
+									<li>
+										<a href="#try">체험하기</a>
+									</li>
+									<li>
+										<a href="#procedure">이용절차</a>
+									</li>
+									<li>
+										<a href="#client">적용사례</a>
+									</li>
+									<li>
+										<a href="#video">소개영상</a>
+									</li>
+									<li>
+										<a href="#contact">서비스문의</a>	
+									</li>
+									<li>
+										<a href="https://con-stg.inihub.biz:9999/obd/" target="_blank">서비스신청</a>
+									</li>
+								</ul>
+							</div>
+							<!--
+							<div class="gnb_login">								
+								<a href="http://initech2.sanggong.net/"><em>LOGIN</em></a>								
+							</div>
+							-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mbg"></div>
+		<div id="main">
+			<div class="animate fast">
+				<div class="main_visual">
+					<div class="size">
+						<div class="visual_wrap clear">
+							<div class="le fromLeft ani-1">
+								<div class="le_box con_box">
+									<span>통합 운영 관리</span>
+									<p class="fromLeft ani-3">수많은 인증서를 한번에 연동!<br>인증 수단은 내 맘대로</p>
+									<b class="fromLeft ani-5">빠르고 편리한 <i>간편인증</i></b>
+									<div class="btn_box">
+										<a href="javascript:void(0);" onclick="scroll_page('intro')" class="btn btns1 fromLeft ani-7">
+											<span>이니허브 자세히보기</span>
+										</a>
+										<a href="https://con-stg.inihub.biz:9999/obd/" onclick="" class="btn btns1 fromLeft ani-8" target="_blank">
+											<span>서비스 신청하기</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="ri fromRight ani-1">
+								<div class="ri_box con_box"> 
+									<div class="video-box">
+										<video class="main-video" src="./video/main_video.mp4" muted autoplay loop playsinline></video>
+									</div>
+								</div>
+								<div class="btn_box ta">
+									<a href="javascript:;" onclick="scroll_page('intro')" class="btn btns1">
+										<span>이니허브 자세히보기</span>
+									</a>
+									<a href="https://con-stg.inihub.biz:9999/obd/" onclick="" class="btn btns1 center_btn" target="_blank">
+										<span>서비스 신청하기</span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="animate fast">
+							<div id="intro" class="section section0 intro">
+								<div class="size">
+									<div class="inner clear">								
+										<div class="sec_tit">						
+											<h3 class="fromBottom ani-1">인증통합서비스란?</h3>  
+											<p>
+												<span class="fromBottom ani-3">이니허브는 <em class="ent"></em>다양한 사설인증 서비스를 <em class="ent"></em>하나로 통합하는</span>
+												<b class="fromBottom ani-5">인증통합서비스입니다</b>
+											</p>
+										</div>
+										<div class="sec_con">
+											<div class="con_box clear">
+												<div class="img_box img_box1 fromBottom ani-7">
+													<div class="tb">
+														<div class="tbc">
+															<span><img src="img/sec0_icon2.svg" alt="본인인증 아이콘이미지"></span>
+															<p class="txt">
+																<b>본인인증</b>
+																<span class="rubik">Self-authentication</span>
+															</p>
+															<p class="txt_over">
+																<i class="icon"></i>나에요! 본인임을 확인했어요!
+															</p>
+														</div>
+													</div>
+												</div>
+												<div class="img_box img_box2 fromBottom ani-8">
+													<div class="tb">
+														<div class="tbc">
+															<span><img src="img/sec0_icon1.svg" alt="전자서명 아이콘이미지"></span>
+															<p class="txt">
+																<b>전자서명</b>
+																<span class="rubik">Digital Signature</span>
+															</p>
+															<p class="txt_over">
+																<i class="icon"></i>이체했어요! 전자서명 지금해요!
+															</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+			<div id="sec_wrap" class="animate fast">
+				<!-- 특장점 -->
+				<div class="section section1">
+					<div class="size">
+						<div class="inner">
+							<div class="sec_tit w">						
+								<h3 class="fromBottom ani-1">인증통합서비스만의 특장점</h3>  
+								<p class="fromBottom ani-3">
+									<span>이니허브가 처음이신가요?</span>
+									<b>이니허브만이 가진 특장점을 확인해보세요</b>
+								</p>
+							</div>
+							<div class="sec_con">
+								<ul class="clear">
+									<li class="fromBottom ani-5">
+										<div>
+											<span class="ico1"><img src="img/sec1_icon1.svg" alt="편의성 아이콘이미지"></span>편의성
+										</div>
+										<ul>
+											<li class="clear">
+												<b class="rubik">01</b>
+												<p>인증수단을 통합하고 관리할 수 있는 서비스 제공</p>
+											</li>
+											<li class="clear">
+												<b class="rubik">02</b>
+												<p>인증통합서비스를 통해 간편한 운영가능</p>
+											</li>
+										</ul>
+									</li>
+									<li class="fromBottom ani-6">
+										<div>
+											<span class="ico2"><img src="img/sec1_icon2.svg" alt="사용성 아이콘이미지"></span>사용성
+										</div>
+										<ul>
+											<li class="clear">
+												<b class="rubik">01</b>
+												<p>표준 인터페이스 통합 관리로 각 서비스에서 간편하게 적용 가능</p>
+											</li>
+											<li class="clear">
+												<b class="rubik">02</b>
+												<p>Work Flow를 활용해 간편한 Multi Factor 인증 적용</p>
+											</li>
+										</ul>
+									</li>
+									<li class="fromBottom ani-7">
+										<div>
+											<span class="ico3"><img src="img/sec1_icon3.svg" alt="보안성 아이콘이미지"></span>보안성
+										</div>
+										<ul>
+											<li class="clear">
+												<b class="rubik">01</b>
+												<p>보안 컴플라이언스 요건을 충족하는 보안 기술</p>
+											</li>
+											<li class="clear">
+												<b class="rubik">02</b>
+												<p>토큰 검증을 통한 사용자와 서비스 측면에서의 강력한 보안 제공</p>
+											</li>
+										</ul>
+									</li>
+									<li class="fromBottom ani-8">
+										<div>
+											<span class="ico4"><img src="img/sec1_icon4.svg" alt="확장성 아이콘이미지"></span>확장성
+										</div>
+										<ul>
+											<li class="clear">
+												<b class="rubik">01</b>
+												<p>플랫폼 기반 신규 인증수단의 추가 도입간편화 및 관리 편의성 제공</p>
+											</li>
+											<li class="clear">
+												<b class="rubik">02</b>
+												<p>Open API를 활용한 업무 연동 및 확장 편의성 제공</p>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //특장점 -->
+				<!-- 구성 -->
+				<div class="section section2">
+					<div class="size">
+						<div class="inner">
+							<div class="sec_tit">						
+								<h3 class="fromBottom ani-1">인증통합서비스 구성</h3>  
+								<p class="fromBottom ani-3">
+									<span>이니허브는 각종 인증 수단의</span>
+									<b>유연하고 즉각적인 도입을 지향합니다</b>
+								</p>
+							</div>
+							<div class="sec_con">
+								<span class="pcta pcta1 fromBottom ani-5"><img src="img/sec2_img_01-1.png" alt="이니허브 인증플랫폼내 모든 인증이 들어있는 구성을 설명한 이미지"></span>
+								<span class="pcta pcta2 fromBottom ani-6"><img src="img/sec2_img_01-2.png" alt="사설인증, 공동금융인증, 2차인증, 본인인증"></span>
+								<span class="mo_span mo_span1"><span class="mo fromBottom ani-5"><img src="img/sec2_img1_mo-1.png" alt="로그인,본인인증,전자서명"></span></span>
+								<span class="mo_span mo_span2"><span class="mo fromBottom ani-7"><img src="img/sec2_img1_mo-2.png" alt="이니허브 인증플랫폼내 모든인증이 들어있는 구성을 설명한 이미지"></span></span>
+								<span class="mo_span mo_span3"><span class="mo fromBottom ani-9"><img src="img/sec2_img1_mo-3.png" alt="사설인증, 공동금융인증, 2차인증, 본인인증"></span></span>
+							</div>
+						</div>
+					</div>
+				</div> 
+				<!-- //구성 -->
+				<!-- 빠른연동 -->
+				<div class="section section3 quick-system">
+					<div class="size">
+						<div class="inner">
+							<div class="sec_tit">
+								<h3 class="fromBottom ani-1">빠른 연동</h3>
+								<p class="fromBottom ani-3">
+									<span>코드 몇 줄로</span>
+									<b>쉽고 빠르게 연동이 가능합니다</b>
+								</p>
+								<div class="btn_box fromBottom ani-5">
+									<a href="https://www2.inihub.biz/docs" class="btn btns1 fromLeft ani-7 done" target="_blank">
+										<span>온라인가이드</span>
+									</a>
+									<a href="https://github.com/initech-inihub/inihub-samples" class="btn btns5 fromLeft ani-7 done"
+										target="_blank">
+										<span>샘플코드</span>
+									</a>
+								</div>
+							</div>
+							<div class="sec_con">
+								<div class="swiper-container fadeSwiper fromBottom ani-3">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<img src="./img/code_step1.png" alt="초기화 샘플코드 이미지">
+										</div>
+										<div class="swiper-slide">
+											<img src="./img/code_step2.png" alt="통합인증 UI 호출 샘플코드 이미지">
+										</div>
+										<div class="swiper-slide">
+											<img src="./img/code_step3.png" alt="인증요청 샘플코드 이미지">
+										</div>
+									</div>
+								</div>
+								<div class="preview pagination fromBottom ani-3"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //빠른연동 -->
+				<!-- 관리자시스템 -->
+				<div class="section section4 admin-system">
+					<div class="size">
+						<div class="inner clear">
+							<div class="sec_tit w 1">						
+								<h3 class="fromBottom ani-1">관리자 시스템</h3>  
+								<p class="fromBottom ani-3">
+									<b>이니허브는 관리자 시스템을 제공하여 </b>
+									<span>인증 이력조회와 통합관리,<br> 간편한 모니터링을 지원합니다</span>
+								</p>
+							</div>
+							<div class="sec_con">
+								<div class="video-box">
+									<video src="./video/video_2.mp4" muted loop controls autoplay playsinline></video>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //관리자시스템 -->
+				<!-- 서비스유형 -->
+				<div class="section section5 service-type">
+					<div class="size">
+						<div class="inner clear">
+							<div class="sec_tit">						
+								<h3 class="fromBottom ani-1">서비스 유형</h3>
+								<p class="fromBottom ani-3">
+									<b>고객사 상황과 환경에 따라</b><br>
+									<span> 도입할 수 있는 서비스 유형</span>
+								</p>
+							</div>
+							<div class="sec_con">
+								<div class="fromBottom ani-5">
+									<dl>
+										<dt><p>Cloud / 서비스형</p></dt>
+										<dd>퍼블릭 클라우드 AWS<br></dd>
+										<dd>사용량 기반과금<br></dd>
+										<dd>시간과 비용절감</dd>
+									</dl>
+									<dl>
+										<dt><p>On-Premise / 구축형</p></dt>
+										<dd>솔루션 내재화<br></dd>
+										<dd>최적의 커스터마이징<br></dd>
+										<dd>통합 운영환경</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //서비스유형 -->
+				<!-- 프로세스 -->
+				<div id="process" class="section section6 process">
+					<div class="size">
+						<div class="inner clear">
+							<div class="sec_tit">						
+								<h3 class="fromBottom ani-1">프로세스</h3>  
+								<p class="fromBottom ani-3">
+									<span>고객사 측면</span>
+									<b>인증프로세스</b>
+								</p>
+								<div class="tab_list">
+									<ul class="clear">
+										<li class="on fromBottom ani-5">
+											<a><span>고객사</span></a>
+										</li>
+										<li class="fromBottom ani-6">
+											<a><span>사용자</span></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="sec_con fromBottom ani-8">
+								<div class="tab_con">
+									<ul>
+										<li class="on">
+											<div class="box">
+												<span class="pcta"><img src="img/sec3_tab1_img2.png" alt="고객사 측면의 인증프로세스 - 1.서비스신청, 2.ID발급화면, 3.인증서비스 사용. 4.인증이력조회 5.정산 "></span>
+												<span class="mo"><img src="img/sec3_tab1_img1_mo.png" alt="고객사 측면의 인증프로세스 - 1.서비스신청, 2.ID발급화면, 3.인증서비스 사용. 4.인증이력조회 5.정산 "></span>
+												<span class="ab pcta fromBottom ani-9"><img src="img/sec3_tab2_img2.jpg" alt="인증이력 목록리스트 샘플이미지"></span>
+											</div>
+										</li>
+										<li>
+											<div class="box">
+												<span class="pcta"><img src="img/sec3_tab2_img2.png" alt="사용자 측면의 인증프로세스 - 1.인증서선택, 2.인증창호출, 3.인증요청, 4.인증완료"></span>
+												<span class="mo"><img src="img/sec3_tab2_img1_mo.png" alt="사용자 측면의 인증프로세스 - 1.인증서선택, 2.인증창호출, 3.인증요청, 4.인증완료"></span>												
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //프로세스 -->
+				<!-- 체험하기 -->
+				<div id="try" class="section section7 try">
+					<div class="size">
+						<div class="inner">				
+							<div class="sec_tit fromBottom ani-1">						
+								<h3 class="fromBottom ani-1">인증통합서비스 체험하기</h3>  
+								<p class="fromBottom ani-3">
+									<span>데모페이지를 통해</span>
+									<b>해당서비스를 체험해보세요</b>
+								</p>
+								<a href="https://demo.initech.com:9100/initech/demo/ts_login/login.html" target="_blank" class="btn btns2 fromBottom ani-7">
+									<span>이니허브 체험하기</span>
+								</a>
+							</div>
+							<div class="sec_con fromBottom ani-5">
+								<span class="ab pcta"><img src="img/sec4_img1_01.png" alt="이니허브 데모사이트 PC 이미지"></span>
+								<span class="ab ta"><img src="img/sec4_img1_02.png" alt="이니허브 데모사이트 태블릿 이미지"></span>
+								<a href="https://demo.initech.com:9100/initech/demo/ts_login/login.html" target="_blank" class="btn btns2 mo">
+									<span>이니허브 체험하기</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //체험하기 -->
+				<!-- 이용절차 -->
+				<div id="procedure" class="section section8 procedure">
+					<div class="size">
+						<div class="inner">
+							<div class="sec_tit">						
+								<h3 class="fromBottom ani-1">서비스 이용절차</h3>  
+								<p class="fromBottom ani-2">
+									<span>가장 간편하고 안전한 인증서비스를</span>
+									<b>지금 바로 경험하세요</b>
+								</p>
+							</div>
+							<div class="sec_con fromBottom ani-4">
+								<div class="con_box">
+									<ul class="clear">
+										<li class="li1 fromBottom ani-4">
+											<div class="img_box">												
+												<div class="tb">
+													<div class="tbc">
+														<span><img src="img/sec5_icon1.svg" alt="서비스신청 아이콘이미지"></span>
+														<p class="txt">	
+															<span class="rubik">STEP 01</span>
+															<b>서비스 신청</b>
+														</p>												
+													</div>
+												</div>												
+											</div>
+											<div class="circle_bg"></div>
+										</li>
+										<li class="li2 fromBottom ani-6">
+											<div class="img_box">												
+												<div class="tb">
+													<div class="tbc">
+														<span><img src="img/sec5_icon2.svg" alt="검토모양 아이콘이미지"></span>
+														<p class="txt">	
+															<span class="rubik">STEP 02</span>
+															<b>서비스 선택</b>
+														</p>												
+													</div>
+												</div>												
+											</div>
+											<div class="circle_bg"></div>
+										</li>
+										<li class="li3 fromBottom ani-8">
+											<div class="img_box">												
+												<div class="tb">
+													<div class="tbc">
+														<span><img src="img/sec5_icon3.svg" alt="결과 아이콘이미지"></span>
+														<p class="txt">	
+															<span class="rubik">STEP 03</span>
+															<b>고객사 ID발급</b>
+														</p>												
+													</div>
+												</div>
+											</div>
+											<div class="circle_bg"></div>
+										</li>
+										<li class="li4 fromBottom ani-10">
+											<div class="img_box">												
+												<div class="tb">
+													<div class="tbc">
+														<span><img src="img/sec5_icon4.svg" alt="등록 아이콘이미지"></span>
+														<p class="txt">	
+															<span class="rubik">STEP 04</span>
+															<b>서비스 연동</b>
+														</p>												
+													</div>
+												</div>												
+											</div>
+											<div class="circle_bg"></div>
+										</li>
+										<li class="li5 fromBottom ani-12">
+											<div class="img_box">
+												<div class="tb">
+													<div class="tbc">
+														<span><img src="img/sec5_icon5.svg" alt="완료 아이콘이미지"></span>
+														<p class="txt">	
+															<span class="rubik">STEP 05</span>
+															<b>서비스 오픈</b>
+														</p>												
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<!--a href="javascript:;" onclick="scroll_page('contact')" class="btn btns2 fromBottom ani-14"> -->
+								<a href="https://con-stg.inihub.biz:9999/obd/" class="btn btns2 fromBottom ani-14" target="_blank">
+									<span>이니허브 서비스 신청하기</span>
+								</a>
+							</div>
+						</div>	
+					</div>
+				</div> 
+				<!-- //이용절차 -->
+				<!-- 적용사례 -->
+				<div id="client" class="section section9 client">
+					<div class="size">
+						<div class="inner clear">
+							<div class="sec_tit">						
+								<h3 class="fromBottom ani-1">적용 사례</h3>  
+								<p class="fromBottom ani-2">
+									<b>이니허브의 실제 적용 사례를 확인해보세요</b>
+								</p>
+							</div>
+							<div class="sec_con pcta fromBottom ani-4">
+								<div class="client_list swiper_pagination pc"></div>	
+								<div class="client_list non_swiper">
+									<span class="client ibkc"></span>
+									<span class="client shinhancard"></span>
+									<span class="client mizuho"></span>
+									<span class="client nhlife"></span>
+									<span class="client payhere"></span>
+									<span class="client samga"></span>
+									<span class="client blank"></span>
+									<span class="client kdca"></span>
+								</div>
+								<div class="swiper-container sec6_swiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="img_box">
+												<div class="box">
+													<span><img src="img/sec6_img1_01.png" alt="고객사 교보생명 샘플이미지"></span>
+												</div>
+												<span class="ab ico1"><img src="img/ico_sec6_logo1.svg" alt="교보생명 로고"></span>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="img_box">
+												<div class="box">
+													<span><img src="img/sec6_img2_01.png" alt="고객사 한국캐피탈 샘플이미지"></span>
+												</div>
+												<span class="ab ico2"><img src="img/ico_sec6_logo2.png" alt="한국캐피탈 로고"></span>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="img_box">
+												<div class="box">
+													<span><img src="img/sec6_img3.png" alt="고객사 한화생명 샘플이미지"></span>
+												</div>
+												<span class="ab top ico3"><img src="img/ico_sec6_logo7.svg" alt="한화생명 로고"></span>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="img_box">
+												<div class="box">
+													<span><img src="img/sec6_img2_10.png" alt="고객사 스푼라디오 샘플이미지"></span>
+												</div>
+												<span class="ab ico4"><img src="img/ico_sec6_logo10.svg" alt="스푼라디오 로고"></span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sec6_next_btn next_btn sec6_paginate_btn"></div>
+								<div class="sec6_prev_btn prev_btn sec6_paginate_btn"></div>
+							</div>
+							<div class="sec_con mo fromBottom ani-4">
+								<div class="client_list swiper_pagination mo"></div>
+								<div class="client_list non_swiper mo">
+									<span class="client ibkc"></span>
+									<span class="client shinhancard"></span>
+									<span class="client mizuho"></span>
+									<span class="client nhlife"></span>
+									<span class="client payhere"></span>
+									<span class="client samga"></span>
+									<span class="client"></span>
+									<span class="client kdca"></span>
+								</div>
+								<div class="swiper-container sec6_mo_swiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="img_box">
+												<div class="box">
+													<span><img src="img/sec6_img1_01.png" alt="고객사 교보생명 샘플이미지"></span>
+												</div>
+												<span class="ab ico1"><img src="img/ico_sec6_logo1.svg" alt="교보생명 로고"></span>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="img_box">
+												<div class="box">
+													<span><img src="img/sec6_img2_01.png" alt="고객사 한국캐피탈 샘플이미지"></span>
+												</div>
+												<span class="ab ico2"><img src="img/ico_sec6_logo2.png" alt="한국캐피탈 로고"></span>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="img_box">
+												<div class="box">
+													<span><img src="img/sec6_img3.png" alt="고객사 한화생명 샘플이미지"></span>
+												</div>
+												<span class="ab top ico3"><img src="img/ico_sec6_logo7.svg" alt="한화생명 로고"></span>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="img_box">
+												<div class="box">
+													<span><img src="img/sec6_img2_10.png" alt="고객사 스푼라디오 샘플이미지"></span>
+												</div>
+												<span class="ab ico4"><img src="img/ico_sec6_logo10.svg" alt="스푼라디오 로고"></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>	
+					</div>
+				</div> 
+				<!-- //적용사례 -->
+				<!-- 소개영상 -->
+				<div id="video" class="section section10 video-section">
+					<div class="size">
+						<div class="inner center">
+							<div class="sec_tit w">						
+								<h3 class="fromBottom ani-1">인증통합서비스 소개 영상</h3>  
+								<p class="fromBottom ani-2">
+									<b>이니허브 INI-HuB, 제대로 알기</b><!-- <span class="num">1</span>화 b안에 넣었던 택스트 변화 태그 -->
+								</p>
+								<div class="tab_list">
+									<ul>
+										<li class="on fromBottom ani-4">
+											<a><span>#1</span></a>
+										</li>
+										<li class="fromBottom ani-5">
+											<a><span>#2</span></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="sec_con fromBottom ani-7">
+								<div class="tab_con">
+									<ul class="clear">
+										<li class="li1 on">
+											<div class="video_area">
+												<div class="poster_box">
+													<button class="btn_play t_none"></button> 										
+													<div class="poster_img back_img" style="background-image:url('https://img.youtube.com/vi/Prt9LL4rM00/0.jpg');">
+														<img src="img/img_poster.jpg" class="basic_img" alt="배경이미지">
+													</div>
+												</div>		
+												<div class="video_box">
+													<div class="video_wrap">
+														<iframe width="1280" height="720" src="https://www.youtube.com/embed/Prt9LL4rM00?version=3&enablejsapi=1" title="이니텍의 인증 통합 중개 서비스 '이니허브 INI-HuB' 제대로 알기 1화. 이니허브 소개" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="li2">
+											<div class="video_area">
+												<div class="poster_box">
+													<button class="btn_play t_none"></button> 										
+													<div class="poster_img back_img" style="background-image:url('https://img.youtube.com/vi/U5T1qkFRiUw/0.jpg');">
+														<img src="img/img_poster.jpg" class="basic_img" alt="배경이미지">
+													</div>
+												</div>		
+												<div class="video_box">
+													<div class="video_wrap">
+														<iframe width="1280" height="720" src="https://www.youtube.com/embed/U5T1qkFRiUw?version=3&enablejsapi=1" title="이니텍의 인증 통합 중개 서비스 '이니허브 INI-HuB' 제대로 알기 2화. 이니허브 사용법" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>	
+					</div>
+				</div> 
+				<!-- //소개영상 -->
+				<!-- 문의하기 -->
+				<div id="contact" class="section section11 contact">
+					<a href="#contact" id="sss" style="display: none;" />
+					<div class="size">
+						<div class="inner clear">
+							<div class="sec_tit">						
+								<h3 class="fromBottom ani-1">서비스 신청 및 문의하기</h3>  
+								<p class="fromBottom ani-2">
+									<span>궁금하신 사항을 남겨주시면,</span>
+									<b>빠른 답변 드리도록 하겠습니다</b>
+								</p>
+								<ul class="fromBottom ani-3">
+									<li><p><em>금융</em>김남중 차장</p><p>02.6445.7065</p><span><a href="mailto:namjoong.kim@initech.com">namjoong.kim@initech.com</a></span></li>
+									<li><p><em>공공</em>이상목 차장</p><p>02.6445.7311</p><span><a href="mailto:sangmok.lee@initech.com">sangmok.lee@initech.com</a></span> </li>
+									<li><p><em>기업</em>이진영 이사</p><p>02.6445.7016</p><span><a href="mailto:jinyeong.lee@initech.com">jinyeong.lee@initech.com</a></span> </li>
+								</ul>
+								<!--<a href="javascript:;" onclick="" class="btn btns3 pop_open">
+									<span>담당자 문의</span>
+								</a>-->
+							</div>
+							<div class="sec_con">
+								<!-- 여기서부터 게시판 onsubmit="return goSave(this);"-->
+								<div class="bbs">
+									<!--https://script.google.com/macros/s/AKfycbw5jIe4Ynoz2taKphlFKHPDR8kN0b7ctQaeJghxxXy8lnrEb6eq6unbn3P2bI6ZXdDc/exec-->
+									<form class="gform" method="post"
+										action="https://script.google.com/macros/s/AKfycbxsAj33R0HiETKC2uCNp6oSrjhVLcNMmWDKD9R6ZipWf3-tk4BBdHjX67Xes9_cgOke3g/exec"
+										name="frm" id="frm" target="frAttachFiles">
+										<div class="write fromBottom ani-4">
+											<table>
+												<caption>문의하기</caption>
+												<colgroup>
+													<col style="width:33.3333%">
+													<col style="width:33.3333%">
+													<col style="width:33.3333%">
+												</colgroup>
+												<tbody>							
+													<tr>
+														<td>
+															<label for="company">회사명</label>
+															<input type="text" name="company" id="company" class="wid100" placeholder="회사명 입력해주세요." autocomplete="off" required>
+														</td>
+														<td>
+															<label for="belong">소속</label>
+															<input type="text" name="belong" id="belong" class="wid100" placeholder="소속을 입력해주세요." autocomplete="off" required>
+														</td>	
+														<td></td>												
+													</tr>
+													<tr>
+														<td>
+															<label for="name">성명</label>
+															<input type="text" name="name" id="name" class="wid100" placeholder="성명을 입력해주세요." autocomplete="off" required>
+														</td>
+														<td>
+															<label for="cell">연락처</label>
+															<input type="tel" name="cell" id="cell" class="wid100" placeholder="연락처를 입력해주세요." required>
+														</td>		
+														<td>
+															<label for="email1">이메일</label>
+															<input type="text" name="email1" id="email1" class="wid100" placeholder="이메일을 입력해주세요." required>
+														</td>
+													</tr>
+													<tr class="check_wrap">
+														<td colspan="3">
+															<p>문의사항</p>
+															<div class="check_box clear">
+																<span>
+																	<input type="radio" name="inquire" value="4" id="inquire4" class="inquire">
+																	<label for="inquire4">견적문의</label>
+																</span>
+																<span>
+																	<input type="radio" name="inquire" value="5" id="inquire5" class="inquire">
+																	<label for="inquire5">도입신청</label>
+																</span>
+																<span>
+																	<input type="radio" name="inquire" value="1" id="inquire1" class="inquire">
+																	<label for="inquire1">제품소개문의</label>
+																</span>
+																<span>
+																	<input type="radio" name="inquire" value="2" id="inquire2" class="inquire">
+																	<label for="inquire2">기술문의</label>
+																</span>
+																<span>
+																	<input type="radio" name="inquire" value="3" id="inquire3" class="inquire">
+																	<label for="inquire3">장애신고</label>
+																</span>																
+																<span>
+																	<input type="radio" name="inquire" value="6" id="inquire6" class="inquire">
+																	<label for="inquire6">기타문의</label>
+																</span>
+															</div>
+														</td>													
+										  			</tr>												
+													<tr class="txtarea">
+														<td colspan="3">	
+															<textarea name="contents" id="contents" placeholder="문의사항을 상세히 적어주세요. 견적문의 시 월평균 인증 트래픽을 남겨주세요." required></textarea>
+														</td>
+													</tr>
+													<tr>
+														<td colspan="3">
+															<!-- 스팸방지 -->
+															<input style="display:none;" class="my-blank" type="text" name="honeypot" id="honeypot" value="" placeholder="빈칸으로 두세요">
+															<label for="honeypot"></label>
+															<!-- //스팸방지 -->
+															<p class="check">
+																<input type="checkbox" name="agree" id="agree" class="required" title="개인정보취급방침" required>
+																<label for="agree"><span> (필수) 개인정보 수집 및 이용에 동의합니다.</span></label>
+																<a href="https://www.inihub.biz/personal_secu_policy.html" target="_blank">개인정보취급방침</a>
+															</p>
+														</td>													
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<!-- //write -->
+										<div class="btnSet clear fromBottom ani-5">		
+											<!--<button id="btnSubmit">문의하기</button>
+												<input onclick="sendMail()" id="sec8_submit" type="submit" value="문의하기" class="btn save btn-send">
+											-->
+											<input id="sec8_submit" type="submit" value="문의하기" class="btn save btn-send">
+											<label for="sec8_submit" class="btn"><span>문의하기</span></label>
+										</div>
+										<div style="display: none;" class="thankyou_message">
+											<p>메일이 전송되었습니다. 확인 후 회신드리겠습니다.</p>
+										</div>
+										<div style="display: none;"  class="thankyou_messagesd">
+											간드아
+										</div>
+								   </form>   
+								   <iframe name="frAttachFiles" style="display:none;"></iframe>
+							  </div>
+							  <!-- //여기까지 게시판--> 
+							</div>
+						</div>	
+					</div>
+				</div>
+				<!-- //문의하기 -->
+				<!-- 브로슈어 다운로드 -->
+				<div class="section section12">
+					<div class="size">
+						<div class="inner center">
+							<div class="sec_tit w">						
+								<h3 class="fromBottom ani-1">Download brochure</h3>  
+								<p class="fromBottom ani-2">
+									<b>이니허브</b>
+									<span>에 대해 알고 싶으신가요?</span>
+								</p>
+								<div class="btn_box center">
+									<a href="https://s3.ap-northeast-2.amazonaws.com/www2.inihub.biz/download/inihub/inihub_brochure_2022.pdf" class="btn btns4 fromBottom ani-4" target="_blank" download>
+										<span>브로슈어 다운로드</span>
+									</a>
+									<a href="https://s3.ap-northeast-2.amazonaws.com/www2.inihub.biz/download/inihub/inihub_products.pdf" class="btn btns4 fromBottom ani-5" target="_blank"  download>
+										<span>제품소개서 다운로드</span>
+									</a>
+								</div>
+							</div>
+						</div>	
+					</div>
+				</div>
+				<!-- //브로슈어 다운로드 -->
+			</div>
+		</div>
+		<div id="footer">
+			<div class="size">
+				<div class="inner clear">
+					<div class="le">
+						<div class="logo">
+							<a href="https://www.initech.com/html/index.html" target="_blank">
+								<img src="img/footer_logo.svg" alt="이니텍"> 
+							</a>
+						</div>  
+						<p>
+							<b>이니텍(주)</b>	
+							<span class="s1">대표이사 : 옥성환</span><span class="s2">사업자등록번호 : 314-81-19071</span>
+							<span class="b">ADD : (08389)서울특별시 구로구 디지털로 26길 61 (구로동, 에이스하이엔드타워2차) 11층</span>
+							<span class="s1">TEL : (대표) 02-6445-7000</span><span class="s2">FAX : 02-6445-7020</span>
+						</p>
+					</div>
+					<!--<div class="ri">
+						<div class="img_box">
+							<span class="img">
+								<img src="./img/img_globalsc.png" alt="Glogbal Security Top100, 2023">
+							</span>
+						</div>
+					</div> -->   
+					<div class="ri">
+						<div class="btns_box">
+							<ul class="clear">
+								<li><a href="https://www.initech.com/" target="_blank"><span class="ico1">이니텍 홈페이지</span></a></li>
+								<li><a href="https://www.youtube.com/channel/UC_mFn4S9xBH67sFReCnpXGA" target="_blank"><span class="ico2">이니텍 공식
+											유튜브</span></a></li>
+								<li class="lst">
+									<!--<a href="./personal_secu_policy.html"  target="_blank"><a href="https://www.inihub.biz/personal_secu_policy.html"  target="_blank">-->
+									<a href="https://www.inihub.biz/personal_secu_policy.html" target="_blank"><span>개인정보처리방침</span></a>
+								</li>
+							</ul>
+							<span>COPYRIGHT © 2016 INITECH Co., Ltd. All RIGHTS RESERVED</span>
+						</div>
+						<div class="img_box">
+							<a href="https://www.boannews.com/top100/" target="_blank"><img src="./img/img_globalsc.png" alt="Glogbal Security Top100, 2023"></a>
+						</div>
+					</div> 
+					<!--
+					<div class="btm">
+						<div class="img_box">
+							<span class="img">
+								<a href="https://www.boannews.com/top100/"><img src="./img/img_globalsc.png" alt="Glogbal Security Top100, 2023"></a>
+							</span>
+						</div>
+					</div>-->
+				</div>
+				
+			</div>	
+		</div>
+	</div>
+	<!--https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js-->
+	<script data-cfasync="false" src="./js/form-submission-handler.js"></script>
+	<!-- Enliple Tracker Start -->
+	<script>
+		(function (a, g, e, n, t) {
+			a.enp = a.enp || function () {
+				(a.enp.q = a.enp.q || []).push(arguments)
+			};
+			n = g.createElement(e);
+			n.async = !0; n.defer = !0;
+			n.src = "https://cdn.megadata.co.kr/dist/prod/enp_tracker_self_hosted.min.js";
+			t = g.getElementsByTagName(e)[0];
+			t.parentNode.insertBefore(n, t)
+		})(window, document, "script");
+		enp('create', 'common', 'initech', { device: 'B' }); // W:웹, M: 모바일, B: 반응형
+		enp('send', 'common', 'initech');
+		enp('create', 'conversion', 'initech', { device: 'B', btnSelector: '.btn-send', convType: 'etc', productName: '문의하기' });
+	</script>
+	<!-- //Enliple Tracker End -->
+	<!-- S:SDCOMM log Analytics(키워드 광고 무효클릭) Start -->
+	<script>
+		var code = "l_716as_0000b079" 
+	</script>
+	<!-- <script src="//sdcomm.co.kr/ip_trace/bot.js"></script> -->
+	<!-- //F:SDCOMM log Analytics(키워드 광고 무효클릭) End -->
 </body>
 </html>
