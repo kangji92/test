@@ -1,8 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 
 <head>
+    <meta name="naver-site-verification" content="4fae317e6e827d40a56104c131ab8c55af2d4173">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
     <title>Contact Form</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no, address=no, email=no">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/content.css">
@@ -36,14 +41,18 @@
 <body>
     <form id="contact-form">
         <!-- To simplify the tutorial, the value is static. -->
+        <label for="contact_number"></label>
         <input type="hidden" name="contact_number" value="697483">
-        <label>Name</label>
+        <label for="user_name">Name</label>
         <input type="text" name="user_name">
-        <label>Email</label>
+        <label for="user_email">Email</label>
         <input type="email" name="user_email">
-        <label>Message</label>
+        <label for="message">Message</label>
         <textarea name="message"></textarea>
-        <input type="submit" value="Send">
+        <div class="btnSet clear fromBottom ani-5">
+            <input id="sec8_submit" type="submit" value="Send" class="btn save btn-send">
+            <label for="sec8_submit" class="btn"><span>문의하기</span></label>
+        </div>
     </form>
 </body>
 
