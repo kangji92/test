@@ -4,15 +4,6 @@
     var elements = form.elements;
     var honeypot;
 
-    
-    // 스팸메일 추가 막기
-    let blocked = document.getElementById('companyfield').value;
-    // console.log(blocked);
-    if (blocked === "google") {
-      return false;
-    }
-  
-    //
     var fields = Object.keys(elements).filter(function(k) {
       if (elements[k].name === "blockhoney") {
         honeypot = elements[k].value;
@@ -64,6 +55,11 @@
     event.preventDefault();           // we are submitting via xhr below
     var form = event.target;
     var formData = getFormData(form);
+
+    if(formData.company.trim() === "google") {
+      return;
+    }
+    
     var data = formData.data;
 
     // 필드가 채워지면 스팸봇에 의해 채워졌다고 가정
