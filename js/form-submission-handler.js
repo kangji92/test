@@ -44,8 +44,9 @@
     // 데이터에 양식별로 값 추가
     formData.formDataNameOrder = JSON.stringify(fields);
     formData.formGoogleSheetName = form.dataset.sheet || "responses"; // 기본 시트명
-    formData.formGoogleSendEmail
-      = form.dataset.email || ""; // no email by default
+    formData.formGoogleSendEmail = form.dataset.email || ""; // no email by default
+
+    formData.userAgent = navigator.userAgent;
 
     return {data: formData, honeypot: honeypot};
   }
