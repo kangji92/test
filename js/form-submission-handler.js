@@ -56,7 +56,7 @@
     var form = event.target;
     var formData = getFormData(form);
 
-    if(formData.company.trim() === "google") {
+    if(formData.data.company.trim() === "google") {
       return;
     }
     
