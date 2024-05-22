@@ -46,8 +46,6 @@
     formData.formGoogleSheetName = form.dataset.sheet || "responses"; // 기본 시트명
     formData.formGoogleSendEmail = form.dataset.email || ""; // no email by default
 
-    formData.userAgent = navigator.userAgent;
-
     return {data: formData, honeypot: honeypot};
   }
 
@@ -60,6 +58,11 @@
     if(formData.data.company.trim() === "google") {
       return;
     }
+
+    // user-agent 
+    formData.data.userAgent = navigator.userAgent;
+    // user-language
+    formData.data.userLanguage = navigator.language;
     
     var data = formData.data;
 
