@@ -348,6 +348,13 @@
 		<link itemprop="url" href="https://www.inihub.biz">
 		<a itemprop="sameAs" href="https://www.youtube.com/@initech1705/featured"></a>
 	</span>
+	<div style="display: none;" id="spinner">
+		<div>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
 	<div class="wrapper">
 		<div id="header" class="header">
 			<div class="inner clear">
@@ -450,25 +457,25 @@
 				<div class="main_visual">
 					<div class="size">
 						<div class="visual_wrap clear">
-							<div class="le fromLeft ani-1">
+							<div class="le fromLeft ani-1 done">
 								<div class="le_box con_box">
 									<span>통합 운영 관리</span>
-									<p class="fromLeft ani-3">수많은 인증서를 한번에 연동!<br>인증 수단은 내 맘대로</p>
-									<b class="fromLeft ani-5">빠르고 편리한 <i>간편인증</i></b>
+									<p class="fromLeft ani-3 done">수많은 인증서를 한번에 연동!<br>인증 수단은 내 맘대로</p>
+									<b class="fromLeft ani-5 done">빠르고 편리한 <i>간편인증</i></b>
 									<div class="btn_box">
-										<a href="javascript:void(0);" onclick="scroll_page('intro')" class="btn btns1 fromLeft ani-7">
+										<a href="javascript:void(0);" onclick="scroll_page('intro')" class="btn btns1 fromLeft ani-7 done">
 											<span>이니허브 자세히보기</span>
 										</a>
-										<a href="https://con-stg.inihub.biz:9999/obd/" onclick="" class="btn btns1 fromLeft ani-8" target="_blank">
+										<a href="https://con-stg.inihub.biz:9999/obd/" onclick="" class="btn btns1 fromLeft ani-8 done" target="_blank">
 											<span>서비스 신청하기</span>
 										</a>
 									</div>
 								</div>
 							</div>
-							<div class="ri fromRight ani-1">
-								<div class="ri_box con_box"> 
+							<div class="ri fromRight ani-1 done">
+								<div class="ri_box con_box">
 									<div class="video-box">
-										<video class="main-video" src="./video/main_video.mp4" muted autoplay loop playsinline></video>
+										<video class="main-video" src="./video/main_video.mp4" muted="" autoplay="" loop="" playsinline="" controls=""></video>
 									</div>
 								</div>
 								<div class="btn_box ta">
@@ -484,11 +491,12 @@
 						<div class="animate fast">
 							<div id="intro" class="section section0 intro">
 								<div class="size">
-									<div class="inner clear">								
-										<div class="sec_tit">						
-											<h3 class="fromBottom ani-1">인증통합서비스란?</h3>  
+									<div class="inner clear">
+										<div class="sec_tit">
+											<h3 class="fromBottom ani-1">인증통합서비스란?</h3>
 											<p>
-												<span class="fromBottom ani-3">이니허브는 <em class="ent"></em>다양한 사설인증 서비스를 <em class="ent"></em>하나로 통합하는</span>
+												<span class="fromBottom ani-3">이니허브는 <em class="ent"></em>다양한 사설인증 서비스를
+													<em class="ent"></em>하나로 통합하는</span>
 												<b class="fromBottom ani-5">인증통합서비스입니다</b>
 											</p>
 										</div>
@@ -529,15 +537,15 @@
 							</div>
 						</div>
 					</div>
-				</div>	
+				</div>
 			</div>
 			<div id="sec_wrap" class="animate fast">
 				<!-- 특장점 -->
 				<div class="section section1">
 					<div class="size">
 						<div class="inner">
-							<div class="sec_tit w">						
-								<h3 class="fromBottom ani-1">인증통합서비스만의 특장점</h3>  
+							<div class="sec_tit w">
+								<h3 class="fromBottom ani-1">인증통합서비스만의 특장점</h3>
 								<p class="fromBottom ani-3">
 									<span>이니허브가 처음이신가요?</span>
 									<b>이니허브만이 가진 특장점을 확인해보세요</b>
@@ -615,8 +623,8 @@
 				<div class="section section2">
 					<div class="size">
 						<div class="inner">
-							<div class="sec_tit">						
-								<h3 class="fromBottom ani-1">인증통합서비스 구성</h3>  
+							<div class="sec_tit">
+								<h3 class="fromBottom ani-1">인증통합서비스 구성</h3>
 								<p class="fromBottom ani-3">
 									<span>이니허브는 각종 인증 수단의</span>
 									<b>유연하고 즉각적인 도입을 지향합니다</b>
@@ -631,7 +639,7 @@
 							</div>
 						</div>
 					</div>
-				</div> 
+				</div>
 				<!-- //구성 -->
 				<!-- 빠른연동 -->
 				<div class="section section3 quick-system">
@@ -647,27 +655,26 @@
 									<a href="https://www2.inihub.biz/docs" class="btn btns1 fromLeft ani-7 done" target="_blank">
 										<span>온라인가이드</span>
 									</a>
-									<a href="https://github.com/initech-inihub/inihub-samples" class="btn btns5 fromLeft ani-7 done"
-										target="_blank">
+									<a href="https://github.com/initech-inihub/inihub-samples" class="btn btns5 fromLeft ani-7 done" target="_blank">
 										<span>샘플코드</span>
 									</a>
 								</div>
 							</div>
 							<div class="sec_con">
-								<div class="swiper-container fadeSwiper fromBottom ani-3">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
+								<div class="swiper-container fadeSwiper fromBottom ani-3 swiper-fade swiper-initialized swiper-horizontal swiper-watch-progress swiper-backface-hidden">
+									<div class="swiper-wrapper" id="swiper-wrapper-c57f8143b668d4f2" aria-live="polite">
+										<div class="swiper-slide swiper-slide-visible swiper-slide-fully-visible swiper-slide-active" role="group" aria-label="1 / 3" data-swiper-slide-index="0" style="width: 382px; opacity: 1; transform: translate3d(0px, 0px, 0px);">
 											<img src="./img/code_step1.png" alt="초기화 샘플코드 이미지">
 										</div>
-										<div class="swiper-slide">
+										<div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 3" data-swiper-slide-index="1" style="width: 382px; opacity: 0; transform: translate3d(-382px, 0px, 0px);">
 											<img src="./img/code_step2.png" alt="통합인증 UI 호출 샘플코드 이미지">
 										</div>
-										<div class="swiper-slide">
+										<div class="swiper-slide" role="group" aria-label="3 / 3" data-swiper-slide-index="2" style="width: 382px; opacity: 0; transform: translate3d(-764px, 0px, 0px);">
 											<img src="./img/code_step3.png" alt="인증요청 샘플코드 이미지">
 										</div>
 									</div>
-								</div>
-								<div class="preview pagination fromBottom ani-3"></div>
+								<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+								<div class="preview pagination fromBottom ani-3 swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span></div>
 							</div>
 						</div>
 					</div>
@@ -677,8 +684,8 @@
 				<div class="section section4 admin-system">
 					<div class="size">
 						<div class="inner clear">
-							<div class="sec_tit w 1">						
-								<h3 class="fromBottom ani-1">관리자 시스템</h3>  
+							<div class="sec_tit w 1">
+								<h3 class="fromBottom ani-1">관리자 시스템</h3>
 								<p class="fromBottom ani-3">
 									<b>이니허브는 관리자 시스템을 제공하여 </b>
 									<span>인증 이력조회와 통합관리,<br> 간편한 모니터링을 지원합니다</span>
@@ -686,7 +693,7 @@
 							</div>
 							<div class="sec_con">
 								<div class="video-box">
-									<video src="./video/video_2.mp4" muted loop controls autoplay playsinline></video>
+									<video src="./video/video_2.mp4" muted="" loop="" controls="" autoplay="" playsinline=""></video>
 								</div>
 							</div>
 						</div>
@@ -697,7 +704,7 @@
 				<div class="section section5 service-type">
 					<div class="size">
 						<div class="inner clear">
-							<div class="sec_tit">						
+							<div class="sec_tit">
 								<h3 class="fromBottom ani-1">서비스 유형</h3>
 								<p class="fromBottom ani-3">
 									<b>고객사 상황과 환경에 따라</b><br>
@@ -707,13 +714,17 @@
 							<div class="sec_con">
 								<div class="fromBottom ani-5">
 									<dl>
-										<dt><p>Cloud / 서비스형</p></dt>
+										<dt>
+											<p>Cloud / 서비스형</p>
+										</dt>
 										<dd>퍼블릭 클라우드 AWS<br></dd>
 										<dd>사용량 기반과금<br></dd>
 										<dd>시간과 비용절감</dd>
 									</dl>
 									<dl>
-										<dt><p>On-Premise / 구축형</p></dt>
+										<dt>
+											<p>On-Premise / 구축형</p>
+										</dt>
 										<dd>솔루션 내재화<br></dd>
 										<dd>최적의 커스터마이징<br></dd>
 										<dd>통합 운영환경</dd>
@@ -728,8 +739,8 @@
 				<div id="process" class="section section6 process">
 					<div class="size">
 						<div class="inner clear">
-							<div class="sec_tit">						
-								<h3 class="fromBottom ani-1">프로세스</h3>  
+							<div class="sec_tit">
+								<h3 class="fromBottom ani-1">프로세스</h3>
 								<p class="fromBottom ani-3">
 									<span>고객사 측면</span>
 									<b>인증프로세스</b>
@@ -758,7 +769,7 @@
 										<li>
 											<div class="box">
 												<span class="pcta"><img src="img/sec3_tab2_img2.png" alt="사용자 측면의 인증프로세스 - 1.인증서선택, 2.인증창호출, 3.인증요청, 4.인증완료"></span>
-												<span class="mo"><img src="img/sec3_tab2_img1_mo.png" alt="사용자 측면의 인증프로세스 - 1.인증서선택, 2.인증창호출, 3.인증요청, 4.인증완료"></span>												
+												<span class="mo"><img src="img/sec3_tab2_img1_mo.png" alt="사용자 측면의 인증프로세스 - 1.인증서선택, 2.인증창호출, 3.인증요청, 4.인증완료"></span>
 											</div>
 										</li>
 									</ul>
@@ -771,9 +782,9 @@
 				<!-- 체험하기 -->
 				<div id="try" class="section section7 try">
 					<div class="size">
-						<div class="inner">				
-							<div class="sec_tit fromBottom ani-1">						
-								<h3 class="fromBottom ani-1">인증통합서비스 체험하기</h3>  
+						<div class="inner">
+							<div class="sec_tit fromBottom ani-1">
+								<h3 class="fromBottom ani-1">인증통합서비스 체험하기</h3>
 								<p class="fromBottom ani-3">
 									<span>데모페이지를 통해</span>
 									<b>해당서비스를 체험해보세요</b>
@@ -797,8 +808,8 @@
 				<div id="procedure" class="section section8 procedure">
 					<div class="size">
 						<div class="inner">
-							<div class="sec_tit">						
-								<h3 class="fromBottom ani-1">서비스 이용절차</h3>  
+							<div class="sec_tit">
+								<h3 class="fromBottom ani-1">서비스 이용절차</h3>
 								<p class="fromBottom ani-2">
 									<span>가장 간편하고 안전한 인증서비스를</span>
 									<b>지금 바로 경험하세요</b>
@@ -808,70 +819,70 @@
 								<div class="con_box">
 									<ul class="clear">
 										<li class="li1 fromBottom ani-4">
-											<div class="img_box">												
+											<div class="img_box" style="height: 220.969px; border-radius: 110.484px;">
 												<div class="tb">
 													<div class="tbc">
 														<span><img src="img/sec5_icon1.svg" alt="서비스신청 아이콘이미지"></span>
-														<p class="txt">	
+														<p class="txt">
 															<span class="rubik">STEP 01</span>
 															<b>서비스 신청</b>
-														</p>												
+														</p>
 													</div>
-												</div>												
+												</div>
 											</div>
 											<div class="circle_bg"></div>
 										</li>
 										<li class="li2 fromBottom ani-6">
-											<div class="img_box">												
+											<div class="img_box" style="height: 220.969px; border-radius: 110.484px;">
 												<div class="tb">
 													<div class="tbc">
 														<span><img src="img/sec5_icon2.svg" alt="검토모양 아이콘이미지"></span>
-														<p class="txt">	
+														<p class="txt">
 															<span class="rubik">STEP 02</span>
 															<b>서비스 선택</b>
-														</p>												
+														</p>
 													</div>
-												</div>												
+												</div>
 											</div>
 											<div class="circle_bg"></div>
 										</li>
 										<li class="li3 fromBottom ani-8">
-											<div class="img_box">												
+											<div class="img_box" style="height: 220.969px; border-radius: 110.484px;">
 												<div class="tb">
 													<div class="tbc">
 														<span><img src="img/sec5_icon3.svg" alt="결과 아이콘이미지"></span>
-														<p class="txt">	
+														<p class="txt">
 															<span class="rubik">STEP 03</span>
 															<b>고객사 ID발급</b>
-														</p>												
+														</p>
 													</div>
 												</div>
 											</div>
 											<div class="circle_bg"></div>
 										</li>
 										<li class="li4 fromBottom ani-10">
-											<div class="img_box">												
+											<div class="img_box" style="height: 220.969px; border-radius: 110.484px;">
 												<div class="tb">
 													<div class="tbc">
 														<span><img src="img/sec5_icon4.svg" alt="등록 아이콘이미지"></span>
-														<p class="txt">	
+														<p class="txt">
 															<span class="rubik">STEP 04</span>
 															<b>서비스 연동</b>
-														</p>												
+														</p>
 													</div>
-												</div>												
+												</div>
 											</div>
 											<div class="circle_bg"></div>
 										</li>
 										<li class="li5 fromBottom ani-12">
-											<div class="img_box">
+											<div class="img_box" style="height: 220.969px; border-radius: 110.484px;">
 												<div class="tb">
 													<div class="tbc">
 														<span><img src="img/sec5_icon5.svg" alt="완료 아이콘이미지"></span>
-														<p class="txt">	
+														<p class="txt">
 															<span class="rubik">STEP 05</span>
 															<b>서비스 오픈</b>
-														</p>												
+														</p>
 													</div>
 												</div>
 											</div>
@@ -883,22 +894,22 @@
 									<span>이니허브 서비스 신청하기</span>
 								</a>
 							</div>
-						</div>	
+						</div>
 					</div>
-				</div> 
+				</div>
 				<!-- //이용절차 -->
 				<!-- 적용사례 -->
 				<div id="client" class="section section9 client">
 					<div class="size">
 						<div class="inner clear">
-							<div class="sec_tit">						
-								<h3 class="fromBottom ani-1">적용 사례</h3>  
+							<div class="sec_tit">
+								<h3 class="fromBottom ani-1">적용 사례</h3>
 								<p class="fromBottom ani-2">
 									<b>이니허브의 실제 적용 사례를 확인해보세요</b>
 								</p>
 							</div>
 							<div class="sec_con pcta fromBottom ani-4">
-								<div class="client_list swiper_pagination pc"></div>	
+								<div class="client_list swiper_pagination pc swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span></div>
 								<div class="client_list non_swiper">
 									<span class="client ibkc"></span>
 									<span class="client shinhancard"></span>
@@ -909,9 +920,9 @@
 									<span class="client blank"></span>
 									<span class="client kdca"></span>
 								</div>
-								<div class="swiper-container sec6_swiper">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
+								<div class="swiper-container sec6_swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+									<div class="swiper-wrapper" id="swiper-wrapper-837189b26799e143" aria-live="polite">
+										<div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 4" style="width: 290px; margin-right: 20px;">
 											<div class="img_box">
 												<div class="box">
 													<span><img src="img/sec6_img1_01.png" alt="고객사 교보생명 샘플이미지"></span>
@@ -919,7 +930,7 @@
 												<span class="ab ico1"><img src="img/ico_sec6_logo1.svg" alt="교보생명 로고"></span>
 											</div>
 										</div>
-										<div class="swiper-slide">
+										<div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 4" style="width: 290px; margin-right: 20px;">
 											<div class="img_box">
 												<div class="box">
 													<span><img src="img/sec6_img2_01.png" alt="고객사 한국캐피탈 샘플이미지"></span>
@@ -927,7 +938,7 @@
 												<span class="ab ico2"><img src="img/ico_sec6_logo2.png" alt="한국캐피탈 로고"></span>
 											</div>
 										</div>
-										<div class="swiper-slide">
+										<div class="swiper-slide" role="group" aria-label="3 / 4" style="width: 290px; margin-right: 20px;">
 											<div class="img_box">
 												<div class="box">
 													<span><img src="img/sec6_img3.png" alt="고객사 한화생명 샘플이미지"></span>
@@ -935,7 +946,7 @@
 												<span class="ab top ico3"><img src="img/ico_sec6_logo7.svg" alt="한화생명 로고"></span>
 											</div>
 										</div>
-										<div class="swiper-slide">
+										<div class="swiper-slide" role="group" aria-label="4 / 4" style="width: 290px; margin-right: 20px;">
 											<div class="img_box">
 												<div class="box">
 													<span><img src="img/sec6_img2_10.png" alt="고객사 스푼라디오 샘플이미지"></span>
@@ -944,12 +955,12 @@
 											</div>
 										</div>
 									</div>
-								</div>
-								<div class="sec6_next_btn next_btn sec6_paginate_btn"></div>
-								<div class="sec6_prev_btn prev_btn sec6_paginate_btn"></div>
+								<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+								<div class="sec6_next_btn next_btn sec6_paginate_btn" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-837189b26799e143" aria-disabled="false"></div>
+								<div class="sec6_prev_btn prev_btn sec6_paginate_btn swiper-button-disabled" tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-837189b26799e143" aria-disabled="true"></div>
 							</div>
 							<div class="sec_con mo fromBottom ani-4">
-								<div class="client_list swiper_pagination mo"></div>
+								<div class="client_list swiper_pagination mo swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"></div>
 								<div class="client_list non_swiper mo">
 									<span class="client ibkc"></span>
 									<span class="client shinhancard"></span>
@@ -960,8 +971,8 @@
 									<span class="client"></span>
 									<span class="client kdca"></span>
 								</div>
-								<div class="swiper-container sec6_mo_swiper">
-									<div class="swiper-wrapper">
+								<div class="swiper-container sec6_mo_swiper swiper-initialized swiper-horizontal">
+									<div class="swiper-wrapper" id="swiper-wrapper-2d555a9d31fbfc410" aria-live="polite" style="transition-duration: 0ms; transition-delay: 0ms;">
 										<div class="swiper-slide">
 											<div class="img_box">
 												<div class="box">
@@ -995,18 +1006,18 @@
 											</div>
 										</div>
 									</div>
-								</div>
+								<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
 							</div>
-						</div>	
+						</div>
 					</div>
-				</div> 
+				</div>
 				<!-- //적용사례 -->
 				<!-- 소개영상 -->
 				<div id="video" class="section section10 video-section">
 					<div class="size">
 						<div class="inner center">
-							<div class="sec_tit w">						
-								<h3 class="fromBottom ani-1">인증통합서비스 소개 영상</h3>  
+							<div class="sec_tit w">
+								<h3 class="fromBottom ani-1">인증통합서비스 소개 영상</h3>
 								<p class="fromBottom ani-2">
 									<b>이니허브 INI-HuB, 제대로 알기</b><!-- <span class="num">1</span>화 b안에 넣었던 택스트 변화 태그 -->
 								</p>
@@ -1027,14 +1038,14 @@
 										<li class="li1 on">
 											<div class="video_area">
 												<div class="poster_box">
-													<button class="btn_play t_none"></button> 										
+													<button class="btn_play t_none"></button>
 													<div class="poster_img back_img" style="background-image:url('https://img.youtube.com/vi/Prt9LL4rM00/0.jpg');">
 														<img src="img/img_poster.jpg" class="basic_img" alt="배경이미지">
 													</div>
-												</div>		
+												</div>
 												<div class="video_box">
 													<div class="video_wrap">
-														<iframe width="1280" height="720" src="https://www.youtube.com/embed/Prt9LL4rM00?version=3&enablejsapi=1" title="이니텍의 인증 통합 중개 서비스 '이니허브 INI-HuB' 제대로 알기 1화. 이니허브 소개" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+														<iframe width="1280" height="720" src="https://www.youtube.com/embed/Prt9LL4rM00?version=3&amp;enablejsapi=1" title="이니텍의 인증 통합 중개 서비스 '이니허브 INI-HuB' 제대로 알기 1화. 이니허브 소개" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 													</div>
 												</div>
 											</div>
@@ -1042,14 +1053,14 @@
 										<li class="li2">
 											<div class="video_area">
 												<div class="poster_box">
-													<button class="btn_play t_none"></button> 										
+													<button class="btn_play t_none"></button>
 													<div class="poster_img back_img" style="background-image:url('https://img.youtube.com/vi/U5T1qkFRiUw/0.jpg');">
 														<img src="img/img_poster.jpg" class="basic_img" alt="배경이미지">
 													</div>
-												</div>		
+												</div>
 												<div class="video_box">
 													<div class="video_wrap">
-														<iframe width="1280" height="720" src="https://www.youtube.com/embed/U5T1qkFRiUw?version=3&enablejsapi=1" title="이니텍의 인증 통합 중개 서비스 '이니허브 INI-HuB' 제대로 알기 2화. 이니허브 사용법" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+														<iframe width="1280" height="720" src="https://www.youtube.com/embed/U5T1qkFRiUw?version=3&amp;enablejsapi=1" title="이니텍의 인증 통합 중개 서비스 '이니허브 INI-HuB' 제대로 알기 2화. 이니허브 사용법" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 													</div>
 												</div>
 											</div>
@@ -1057,25 +1068,34 @@
 									</ul>
 								</div>
 							</div>
-						</div>	
+						</div>
 					</div>
-				</div> 
+				</div>
 				<!-- //소개영상 -->
 				<!-- 문의하기 -->
 				<div id="contact" class="section section11 contact">
-					<a href="#contact" id="sss" style="display: none;" />
+					<a href="#contact" id="stay" style="display: none;"></a>
 					<div class="size">
 						<div class="inner clear">
-							<div class="sec_tit">						
-								<h3 class="fromBottom ani-1">서비스 신청 및 문의하기</h3>  
+							<div class="sec_tit">
+								<h3 class="fromBottom ani-1">서비스 신청 및 문의하기</h3>
 								<p class="fromBottom ani-2">
 									<span>궁금하신 사항을 남겨주시면,</span>
 									<b>빠른 답변 드리도록 하겠습니다</b>
 								</p>
 								<ul class="fromBottom ani-3">
-									<li><p><em>금융</em>김남중 차장</p><p>02.6445.7065</p><span><a href="mailto:namjoong.kim@initech.com">namjoong.kim@initech.com</a></span></li>
-									<li><p><em>공공</em>이상목 차장</p><p>02.6445.7311</p><span><a href="mailto:sangmok.lee@initech.com">sangmok.lee@initech.com</a></span> </li>
-									<li><p><em>기업</em>이진영 이사</p><p>02.6445.7016</p><span><a href="mailto:jinyeong.lee@initech.com">jinyeong.lee@initech.com</a></span> </li>
+									<li>
+										<p><em>금융</em>정재연 팀장</p>
+										<p>02.6445.7146</p><span><a href="mailto:jaeyeon.jung@initech.com">jaeyeon.jung@initech.com</a></span>
+									</li>
+									<li>
+										<p><em>공공</em>이상목 팀장</p>
+										<p>02.6445.7311</p><span><a href="mailto:sangmok.lee@initech.com">sangmok.lee@initech.com</a></span>
+									</li>
+									<li>
+										<p><em>기업</em>이진영 팀장</p>
+										<p>02.6445.7016</p><span><a href="mailto:jinyeong.lee@initech.com">jinyeong.lee@initech.com</a></span>
+									</li>
 								</ul>
 								<!--<a href="javascript:;" onclick="" class="btn btns3 pop_open">
 									<span>담당자 문의</span>
@@ -1084,10 +1104,7 @@
 							<div class="sec_con">
 								<!-- 여기서부터 게시판 onsubmit="return goSave(this);"-->
 								<div class="bbs">
-									<!--https://script.google.com/macros/s/AKfycbw5jIe4Ynoz2taKphlFKHPDR8kN0b7ctQaeJghxxXy8lnrEb6eq6unbn3P2bI6ZXdDc/exec-->
-									<form class="gform" method="post"
-										action="https://script.google.com/macros/s/AKfycbxsAj33R0HiETKC2uCNp6oSrjhVLcNMmWDKD9R6ZipWf3-tk4BBdHjX67Xes9_cgOke3g/exec"
-										name="frm" id="frm" target="frAttachFiles">
+									<form class="gform" method="post" action="https://script.google.com/macros/s/AKfycbygg0VWJDeGPmcKr3mKSc8DyPb_UQQ_2wqukRaBabdyCxf5CGGh4CenGUCo1XDuXm7KQQ/exec" name="frm" id="frm" target="frAttachFiles">
 										<div class="write fromBottom ani-4">
 											<table>
 												<caption>문의하기</caption>
@@ -1096,104 +1113,111 @@
 													<col style="width:33.3333%">
 													<col style="width:33.3333%">
 												</colgroup>
-												<tbody>							
+												<tbody>
 													<tr>
 														<td>
-															<label for="company">회사명</label>
-															<input type="text" name="company" id="company" class="wid100" placeholder="회사명 입력해주세요." autocomplete="off" required>
+															<label for="companyfield">회사명</label>
+															<input type="text" name="company" id="companyfield" class="wid100" placeholder="회사명 입력해주세요." autocomplete="off" required="">
 														</td>
 														<td>
-															<label for="belong">소속</label>
-															<input type="text" name="belong" id="belong" class="wid100" placeholder="소속을 입력해주세요." autocomplete="off" required>
-														</td>	
-														<td></td>												
+															<label for="belongfield">소속</label>
+															<input type="text" name="belong" id="belongfield" class="wid100" placeholder="소속을 입력해주세요." autocomplete="off" required="">
+														</td>
+														<td></td>
 													</tr>
 													<tr>
 														<td>
-															<label for="name">성명</label>
-															<input type="text" name="name" id="name" class="wid100" placeholder="성명을 입력해주세요." autocomplete="off" required>
+															<label for="namefield">성명</label>
+															<input type="text" name="name" id="namefield" class="wid100" placeholder="성명을 입력해주세요." autocomplete="off" required="">
 														</td>
 														<td>
-															<label for="cell">연락처</label>
-															<input type="tel" name="cell" id="cell" class="wid100" placeholder="연락처를 입력해주세요." required>
-														</td>		
+															<label for="cellfield">연락처</label>
+															<input type="tel" name="cell" id="cellfield" class="wid100" placeholder="연락처를 입력해주세요." autocomplete="off" required="">
+														</td>
 														<td>
-															<label for="email1">이메일</label>
-															<input type="text" name="email1" id="email1" class="wid100" placeholder="이메일을 입력해주세요." required>
+															<label for="emailfield">이메일</label>
+															<input type="text" name="email" id="emailfield" class="wid100" placeholder="이메일을 입력해주세요." autocomplete="off" required="">
 														</td>
 													</tr>
-													<tr class="check_wrap">
+													<!--<tr class="check_wrap">
 														<td colspan="3">
 															<p>문의사항</p>
 															<div class="check_box clear">
 																<span>
-																	<input type="radio" name="inquire" value="4" id="inquire4" class="inquire">
+																	<input type="checkbox" name="inquire" value="4" id="inquire4" onclick="checkOnlyOne(this)" class="inquire">
 																	<label for="inquire4">견적문의</label>
 																</span>
 																<span>
-																	<input type="radio" name="inquire" value="5" id="inquire5" class="inquire">
+																	<input type="checkbox" name="inquire" value="5" id="inquire5" onclick="checkOnlyOne(this)" class="inquire">
 																	<label for="inquire5">도입신청</label>
 																</span>
 																<span>
-																	<input type="radio" name="inquire" value="1" id="inquire1" class="inquire">
+																	<input type="checkbox" name="inquire" value="1" id="inquire1" onclick="checkOnlyOne(this)" class="inquire">
 																	<label for="inquire1">제품소개문의</label>
 																</span>
 																<span>
-																	<input type="radio" name="inquire" value="2" id="inquire2" class="inquire">
+																	<input type="checkbox" name="inquire" value="2" id="inquire2" onclick="checkOnlyOne(this)" class="inquire">
 																	<label for="inquire2">기술문의</label>
 																</span>
 																<span>
-																	<input type="radio" name="inquire" value="3" id="inquire3" class="inquire">
+																	<input type="checkbox" name="inquire" value="3" id="inquire3" onclick="checkOnlyOne(this)" class="inquire">
 																	<label for="inquire3">장애신고</label>
-																</span>																
+																</span>
 																<span>
-																	<input type="radio" name="inquire" value="6" id="inquire6" class="inquire">
+																	<input type="radio" name="inquire" value="6" id="inquire6" onclick="checkOnlyOne(this)" class="inquire">
 																	<label for="inquire6">기타문의</label>
 																</span>
 															</div>
-														</td>													
-										  			</tr>												
+														</td>
+													</tr>-->
 													<tr class="txtarea">
-														<td colspan="3">	
-															<textarea name="contents" id="contents" placeholder="문의사항을 상세히 적어주세요. 견적문의 시 월평균 인증 트래픽을 남겨주세요." required></textarea>
+														<td colspan="3">
+															<p>문의사항</p>
+															<select name="inquire" id="inquire" required="">
+																<option value="">문의유형을 선택해주세요</option>
+																<option value="견적문의">견적문의</option>
+																<option value="도입신청">도입신청</option>
+																<option value="제품소개문의">제품소개문의</option>
+																<option value="기술문의">기술문의</option>
+																<option value="장애신고">장애신고</option>
+																<option value="기타문의">기타문의</option>
+															</select>
+															<textarea name="contents" id="contents" placeholder="문의사항을 상세히 적어주세요. 견적문의 시 월평균 인증 트래픽을 남겨주세요." required=""></textarea>
 														</td>
 													</tr>
 													<tr>
 														<td colspan="3">
 															<!-- 스팸방지 -->
-															<input style="display:none;" class="my-blank" type="text" name="honeypot" id="honeypot" value="" placeholder="빈칸으로 두세요">
-															<label for="honeypot"></label>
+															<input class="my-blank" type="text" name="blockhoney" id="userinfo" autocomplete="off" value="">
+															<label for="userinfo"></label>
 															<!-- //스팸방지 -->
 															<p class="check">
-																<input type="checkbox" name="agree" id="agree" class="required" title="개인정보취급방침" required>
+																<input type="checkbox" name="agree" id="agree" class="required" title="개인정보취급방침" required="">
 																<label for="agree"><span> (필수) 개인정보 수집 및 이용에 동의합니다.</span></label>
 																<a href="https://www.inihub.biz/personal_secu_policy.html" target="_blank">개인정보취급방침</a>
 															</p>
-														</td>													
+														</td>
 													</tr>
 												</tbody>
 											</table>
 										</div>
 										<!-- //write -->
-										<div class="btnSet clear fromBottom ani-5">		
-											<!--<button id="btnSubmit">문의하기</button>
-												<input onclick="sendMail()" id="sec8_submit" type="submit" value="문의하기" class="btn save btn-send">
-											-->
+										<div class="btnSet clear fromBottom ani-5">
 											<input id="sec8_submit" type="submit" value="문의하기" class="btn save btn-send">
 											<label for="sec8_submit" class="btn"><span>문의하기</span></label>
 										</div>
 										<div style="display: none;" class="thankyou_message">
-											<p>메일이 전송되었습니다. 확인 후 회신드리겠습니다.</p>
+											<p>전송완료!</p>
 										</div>
-										<div style="display: none;"  class="thankyou_messagesd">
-											간드아
+										<div style="display: none;" class="loading">
+											메일 전송중..
 										</div>
-								   </form>   
-								   <iframe name="frAttachFiles" style="display:none;"></iframe>
-							  </div>
-							  <!-- //여기까지 게시판--> 
+									</form>
+									<iframe name="frAttachFiles" style="display:none;"></iframe>
+								</div>
+								<!-- //여기까지 게시판-->
 							</div>
-						</div>	
+						</div>
 					</div>
 				</div>
 				<!-- //문의하기 -->
@@ -1201,22 +1225,22 @@
 				<div class="section section12">
 					<div class="size">
 						<div class="inner center">
-							<div class="sec_tit w">						
-								<h3 class="fromBottom ani-1">Download brochure</h3>  
+							<div class="sec_tit w">
+								<h3 class="fromBottom ani-1">Download brochure</h3>
 								<p class="fromBottom ani-2">
 									<b>이니허브</b>
 									<span>에 대해 알고 싶으신가요?</span>
 								</p>
 								<div class="btn_box center">
-									<a href="https://s3.ap-northeast-2.amazonaws.com/www2.inihub.biz/download/inihub/inihub_brochure_2022.pdf" class="btn btns4 fromBottom ani-4" target="_blank" download>
+									<a href="https://s3.ap-northeast-2.amazonaws.com/www2.inihub.biz/download/inihub/inihub_brochure_2022.pdf" class="btn btns4 fromBottom ani-4" target="_blank" download="">
 										<span>브로슈어 다운로드</span>
 									</a>
-									<a href="https://s3.ap-northeast-2.amazonaws.com/www2.inihub.biz/download/inihub/inihub_products.pdf" class="btn btns4 fromBottom ani-5" target="_blank"  download>
+									<a href="https://s3.ap-northeast-2.amazonaws.com/www2.inihub.biz/download/inihub/inihub_products.pdf" class="btn btns4 fromBottom ani-5" target="_blank" download="">
 										<span>제품소개서 다운로드</span>
 									</a>
 								</div>
 							</div>
-						</div>	
+						</div>
 					</div>
 				</div>
 				<!-- //브로슈어 다운로드 -->
@@ -1298,7 +1322,7 @@
 	<script>
 		var code = "l_716as_0000b079" 
 	</script>
-	<!-- <script src="//sdcomm.co.kr/ip_trace/bot.js"></script> -->
+	<script src="//sdcomm.co.kr/ip_trace/bot.js"></script>
 	<!-- //F:SDCOMM log Analytics(키워드 광고 무효클릭) End -->
 </body>
 </html>
