@@ -1,0 +1,113 @@
+﻿<div style="width: auto; height: auto; font-size: 0;"></div>
+
+<!-- 템플릿 기본1 -->
+<style>
+* {font-family: 'Malgun Gothic', 'Noto Sans KR', apple-system, sans-serif;}
+.cke_editable {margin: 0;}
+
+/* 에디터_이미지 */
+.img_box {width: 100%; max-width: 700px; margin: 0 auto; line-height: 0;}
+.img_box .img_inner {text-align: center;}
+
+/* 에디터_푸터 */
+.foot_box .tit {padding: 0 20px;}
+.foot_box .tit br {display: none;}
+
+/*** 반응형(모바일_템플릿기준) ***/
+@media screen and (max-width: 480px) {
+    /* 에디터_푸터 */
+    .foot_box .tit br {display: block;}
+}
+figure {
+    outline: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+}
+table {width: 100% !important;}
+table tr td {text-align: left;}
+.tit_box {width: 100%; max-width: 660px; margin: 0 auto 30px;}
+.tit.color_change {font-weight: 600 !important;}
+.title.color_change {display: flex; align-items: center; color: #000;}
+</style>
+    
+<div class="m_template_area" style="width: 100%; max-width: 700px; margin: 0 auto; padding: 20px 0 0;">
+    <div class="tit_box" style="max-width: 660px; margin: 0 auto 30px;">
+        <div class="tit color_change" id="changeTitle" style="font-weight: 600; font-size: 23px; line-height: 1.28; letter-spacing: -0.77px; color: #000000; word-break: break-all;">제목</div>
+    </div>
+    <div class="m_template_con" style="max-width: 660px; width: 100%; margin: 0 auto;">
+        <div class="title color_change" style="display: flex; align-items: center; margin-bottom: 10px; font-weight: 600; font-size: 22px; line-height: 1.2; color: #000000; letter-spacing: normal; word-break: break-word;">
+            <img class="ico_change" src="https://webtest.findjob.co.kr/UploadFiles/job/temp_form/temp_icon/temp_img_0_1.png" alt="" style="margin-right: 6px; width: 19px; height: 19px; vertical-align: inherit;">
+            모집조건
+        </div>
+        <table cellpadding="0" cellspacing="0" style="border: none; width: 100% !important; margin-bottom: 40px;">
+            <tbody>
+                <tr>
+                    <th style="width: 100px; padding: 7px 3px 7px 3px; font-weight: 600; font-size: 17px; letter-spacing: normal; color: #000; text-align: left; word-break: break-all; vertical-align: top; box-sizing: initial !important;">모집분야</th>
+                    <td style="padding: 7px 3px 7px 3px; font-weight: 400; font-size: 17px; color: #333; letter-spacing: -0.8px; word-break: break-word; vertical-align: top; box-sizing: initial !important; text-align: left;" id="changeWorkTake"></td>
+                </tr>
+                <tr>
+                    <th style="width: 100px; padding: 7px 3px 7px 3px; font-weight: 600; font-size: 17px; letter-spacing: normal; color: #000; text-align: left; word-break: break-all; vertical-align: top; box-sizing: initial !important;">근무형태</th>
+                    <td style="padding: 7px 3px 7px 3px; font-weight: 400; font-size: 17px; color: #333; letter-spacing: -0.8px; word-break: break-word; vertical-align: top; box-sizing: initial !important; text-align: left;" id="changeWorkType"></td>
+                </tr>
+                <tr>
+                    <th style="width: 100px; padding: 7px 3px 7px 3px; font-weight: 600; font-size: 17px; letter-spacing: normal; color: #000; text-align: left; word-break: break-all; vertical-align: top; box-sizing: initial !important;">학력</th>
+                    <td style="padding: 7px 3px 7px 3px; font-weight: 400; font-size: 17px; color: #333; letter-spacing: -0.8px; word-break: break-word; vertical-align: top; box-sizing: initial !important; text-align: left;" id="changeAcademy"></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="title color_change" style="display: flex; align-items: center; margin-bottom: 10px; font-weight: 600; font-size: 22px; line-height: 1.2; color: #000000; letter-spacing: normal; word-break: break-word;">
+            <img class="ico_change" src="https://webtest.findjob.co.kr/UploadFiles/job/temp_form/temp_icon/temp_img_0_1.png" alt="" style="margin-right: 6px; width: 19px; height: 19px; vertical-align: inherit;">
+            근무조건
+        </div>
+        <table cellpadding="0" cellspacing="0" style="border: none; width: 100% !important; margin-bottom: 40px;">
+            <tbody>
+                <tr>
+                    <th style="width: 100px; padding: 7px 3px 7px 3px; font-weight: 600; font-size: 17px; letter-spacing: normal; color: #000; text-align: left; word-break: break-all; vertical-align: top; box-sizing: initial !important;">급여</th>
+                    <td style="padding: 7px 3px 7px 3px; font-weight: 400; font-size: 17px; color: #333; letter-spacing: -0.8px; word-break: break-word; vertical-align: top; box-sizing: initial !important; text-align: left;" id="changePay"></td>
+                </tr>
+                <tr>
+                    <th style="width: 100px; padding: 7px 3px 7px 3px; font-weight: 600; font-size: 17px; letter-spacing: normal; color: #000; text-align: left; word-break: break-all; vertical-align: top; box-sizing: initial !important;">근무요일</th>
+                    <td style="padding: 7px 3px 7px 3px; font-weight: 400; font-size: 17px; color: #333; letter-spacing: -0.8px; word-break: break-word; vertical-align: top; box-sizing: initial !important; text-align: left;" id="changeWorkDay"></td>
+                </tr>
+                <tr>
+                    <th style="width: 100px; padding: 7px 3px 7px 3px; font-weight: 600; font-size: 17px; letter-spacing: normal; color: #000; text-align: left; word-break: break-all; vertical-align: top; box-sizing: initial !important;">근무시간</th>
+                    <td style="padding: 7px 3px 7px 3px; font-weight: 400; font-size: 17px; color: #333; letter-spacing: -0.8px; word-break: break-word; vertical-align: top; box-sizing: initial !important; text-align: left;" id="changeWorkTime"></td>
+                </tr>
+                <tr>
+                    <th style="width: 100px; padding: 7px 3px 7px 3px; font-weight: 600; font-size: 17px; letter-spacing: normal; color: #000; text-align: left; word-break: break-all; vertical-align: top; box-sizing: initial !important;">근무지 위치</th>
+                    <td style="padding: 7px 3px 7px 3px; font-weight: 400; font-size: 17px; color: #333; letter-spacing: -0.8px; word-break: break-word; vertical-align: top; box-sizing: initial !important; text-align: left;" id="changeAddress"></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="title color_change" style="display: flex; align-items: center; margin-bottom: 10px; font-weight: 600; font-size: 22px; line-height: 1.2; color: #000000; letter-spacing: normal; word-break: break-word;">
+            <img class="ico_change" src="https://webtest.findjob.co.kr/UploadFiles/job/temp_form/temp_icon/temp_img_0_1.png" alt="" style="margin-right: 6px; width: 19px; height: 19px; vertical-align: inherit;">
+            접수방법
+        </div>
+        <table cellpadding="0" cellspacing="0" style="border: none; width: 100% !important;">
+            <tbody>
+                <tr>
+                    <th style="width: 100px; padding: 7px 3px 7px 3px; font-weight: 600; font-size: 17px; letter-spacing: normal; color: #000; text-align: left; word-break: break-all; vertical-align: top; box-sizing: initial !important;">모집마감</th>
+                    <td style="padding: 7px 3px 7px 3px; font-weight: 400; font-size: 17px; color: #333; letter-spacing: -0.8px; word-break: break-word; vertical-align: top; box-sizing: initial !important; text-align: left;" id="changeDline"></td>
+                </tr>
+                <tr>
+                    <th style="width: 100px; padding: 7px 3px 7px 3px; font-weight: 600; font-size: 17px; letter-spacing: normal; color: #000; text-align: left; word-break: break-all; vertical-align: top; box-sizing: initial !important;">지원방법</th>
+                    <td style="padding: 7px 3px 7px 3px; font-weight: 400; font-size: 17px; color: #333; letter-spacing: -0.8px; word-break: break-word; vertical-align: top; box-sizing: initial !important; text-align: left;" id="changeApply"></td>
+                </tr>
+                <tr>
+                    <th style="width: 100px; padding: 7px 3px 7px 3px; font-weight: 600; font-size: 17px; letter-spacing: normal; color: #000; text-align: left; word-break: break-all; vertical-align: top; box-sizing: initial !important;">지원서류</th>
+                    <td style="padding: 7px 3px 7px 3px; font-weight: 400; font-size: 17px; color: #333; letter-spacing: -0.8px; word-break: break-word; vertical-align: top; box-sizing: initial !important; text-align: left;" id="changeDoc"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="foot_box" style="margin-top: 60px;">
+            <div class="tit" style="margin-bottom: 13px; font-weight: 600; font-weight: 400; font-size: 13px; line-height: 20px; color: #919191; letter-spacing: -0.6px; text-align: center; word-break: keep-all;">전화 문의 시 "벼룩시장에서 보고 전화드렸어요."&nbsp;<br>하시면 빠른 문의가 가능합니다.</div>
+            <div class="foot_logo" style="display: flex; justify-content: center;  margin-bottom: 14px; text-align: center;">
+                <img src="https://webtest.findjob.co.kr/UploadFiles/job/temp_form/mediawill_logo.png" alt="" style="margin: 0 auto; width: 80px; height: 12px;">
+            </div>
+            <div class="txt" style="margin-bottom: 13px; font-weight: 600; font-weight: 400; font-size: 13px; line-height: 21px; color: #717171; letter-spacing: -0.8px; text-align: center;">DESIGNED BY 벼룩시장</div>
+        </div>
+    </div>
+</div>
+    
